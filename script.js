@@ -51,53 +51,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   
     // ======= Scroll Animation =======
-    // ======= Enhanced Scroll Animation with Fade Effects =======
     const observerOptions = {
       root: null,
-      threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
-      rootMargin: '-10px 0px -10px 0px'
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
     };
     
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        const element = entry.target;
-        const rect = element.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        
-        // Calculate fade based on position in viewport
-        let opacity = 1;
-        let translateY = 0;
-        
         if (entry.isIntersecting) {
-          // Element is in viewport - calculate fade based on position
-          const elementCenter = rect.top + rect.height / 2;
-          const viewportCenter = windowHeight / 2;
-          const distanceFromCenter = Math.abs(elementCenter - viewportCenter);
-          const maxDistance = windowHeight / 2;
-          
-          // Fade out as element moves away from center
-          opacity = Math.max(0.3, 1 - (distanceFromCenter / maxDistance) * 0.7);
-          
-          // Add active class for main animation
-          element.classList.add('active');
-          
-          // Apply dynamic opacity
-          element.style.opacity = opacity;
-          element.style.transform = `translateY(${translateY}px)`;
-        } else {
-          // Element is outside viewport - fade out completely
-          if (rect.bottom < 0) {
-            // Element is above viewport
-            opacity = 0.2;
-            translateY = -20;
-          } else if (rect.top > windowHeight) {
-            // Element is below viewport
-            opacity = 0.2;
-            translateY = 20;
-          }
-          
-          element.style.opacity = opacity;
-          element.style.transform = `translateY(${translateY}px)`;
+          entry.target.classList.add('active');
         }
       });
     }, observerOptions);
@@ -105,44 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const revealElements = document.querySelectorAll('.reveal-on-scroll');
     revealElements.forEach(element => observer.observe(element));
     
-    // Enhanced scroll listener for continuous fade effects
-    let ticking = false;
-    
-    function updateElementsOnScroll() {
-      revealElements.forEach(element => {
-        const rect = element.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        
-        // Only apply fade effects to elements that are somewhat visible
-        if (rect.bottom > -100 && rect.top < windowHeight + 100) {
-          const elementCenter = rect.top + rect.height / 2;
-          const viewportCenter = windowHeight / 2;
-          const distanceFromCenter = Math.abs(elementCenter - viewportCenter);
-          const maxDistance = windowHeight / 2;
-          
-          // Calculate opacity based on distance from viewport center
-          let opacity = Math.max(0.2, 1 - (distanceFromCenter / maxDistance) * 0.8);
-          
-          // Boost opacity when element is well within viewport
-          if (rect.top > 0 && rect.bottom < windowHeight) {
-            opacity = Math.max(opacity, 0.9);
-          }
-          
-          // Apply smooth transitions
-          element.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
-          element.style.opacity = opacity;
-        }
-      });
-      
-      ticking = false;
-    }
-    
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(updateElementsOnScroll);
-        ticking = true;
-      }
-    });
     // ======= Smooth Scroll for Navigation Links =======
     function smoothScrollTo(targetPosition, duration = 800) {
       const startPosition = window.pageYOffset;
