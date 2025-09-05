@@ -6,6 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
             video: "assets/Superman Game Demo.mp4"
         },
         {
+            title: "NoXcuses Web App",
+            description: "Developing a full-stack workout tracking web application using HTML, CSS, and JavaScript, hosted on a personal server. Implemented a progressive overload feature that recommends weight increases based on historical user performance data. Currently expanding the project into an iOS application.<br><a href=\"https://noxcuses.me\" target=\"_blank\">Visit Site</a>",
+            iframe: "https://noxcuses.me"
+        },
+        {
             title: "Determan Tech Help Website",
             description: "Developed a website for my tech support company, Determan Tech Help.<br><a href=\"https://determantechhelp.com\" target=\"_blank\">Visit Site</a>",
             iframe: "https://determantechhelp.com"
