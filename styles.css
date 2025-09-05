@@ -254,17 +254,66 @@ body {
 }
 
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
     max-width: 600px;
     margin: 0 auto;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-item a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.contact-item a:hover {
+    background: rgba(74, 144, 226, 0.2);
+    border-color: #4a90e2;
+    transform: translateY(-2px);
+}
+
+.contact-icon {
+    font-size: 1.2rem;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .contact-item a {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 .contact-form input,
@@ -682,6 +731,15 @@ h1, h2, h3, h4, h5, h6,
 .project-card h3,
 .experience-content h3 {
     font-family: 'Source Code Pro', monospace;
+}
+
+/* Add consistent spacing for section titles */
+.section h2 {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    margin-bottom: 2rem;
 }
 
 .summary-container, .container {
