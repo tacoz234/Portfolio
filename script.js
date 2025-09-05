@@ -181,21 +181,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }
   
         modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        document.documentElement.classList.add('no-scroll');
         if (supermanLogoBg) supermanLogoBg.style.display = "block";
       });
     });
   
     closeBtn.addEventListener('click', () => {
       modal.classList.remove('active');
-      document.body.style.overflow = '';
+      document.documentElement.classList.remove('no-scroll');
       if (supermanLogoBg) supermanLogoBg.style.display = "none";
     });
   
     modal.addEventListener('click', (e) => {
       if (e.target === modal) {
         modal.classList.remove('active');
-        document.body.style.overflow = '';
+        document.documentElement.classList.remove('no-scroll');
         if (supermanLogoBg) supermanLogoBg.style.display = "none";
       }
     });
@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener('keydown', (e) => {
       if (e.key === "Escape" && modal.classList.contains('active')) {
         modal.classList.remove('active');
-        document.body.style.overflow = '';
+        document.documentElement.classList.remove('no-scroll');
         if (supermanLogoBg) supermanLogoBg.style.display = "none";
       }
     });
@@ -233,6 +233,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById('tool-modal-title').innerText = toolInfo[tool].name;
           document.getElementById('tool-modal-body').innerHTML = toolInfo[tool].details;
           toolModalOverlay.classList.add('active');
+          document.documentElement.classList.add('no-scroll');
         }
       });
     });
@@ -240,13 +241,23 @@ document.addEventListener("DOMContentLoaded", function () {
     if (toolModalClose) {
       toolModalClose.onclick = function() {
         toolModalOverlay.classList.remove('active');
+        document.documentElement.classList.remove('no-scroll');
       };
     }
   
     if (toolModalOverlay) {
       toolModalOverlay.onclick = function(e) {
-        if (e.target === this) this.classList.remove('active');
+        if (e.target === this) {
+          this.classList.remove('active');
+          document.documentElement.classList.remove('no-scroll');
+        }
       };
     }
-  });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === "Escape" && toolModalOverlay && toolModalOverlay.classList.contains('active')) {
+        toolModalOverlay.classList.remove('active');
+        document.documentElement.classList.remove('no-scroll');
+      }
+    });
+});
   
