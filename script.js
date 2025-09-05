@@ -212,112 +212,191 @@ document.addEventListener("DOMContentLoaded", function () {
     const toolInfo = {
         python: { 
             name: "Python", 
-            details: `<ul>
-                <li>CS452: Design and Analysis of Algorithms</li>
-                <li>CS149: Introduction to Programming</li>
-                <li>DATA200: Introduction to Data Science</li>
-                <li>CS445: Machine Learning</li>
-                <li>Experience: Noblis</li>
-            </ul>` 
+            details: `<div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Class Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">CS452: Design and Analysis of Algorithms</li>
+                    <li style="margin-bottom: 0.5rem;">CS149: Introduction to Programming</li>
+                    <li style="margin-bottom: 0.5rem;">DATA200: Introduction to Data Science</li>
+                    <li style="margin-bottom: 0.5rem;">CS445: Machine Learning</li>
+                </ul>
+            </div>
+            <div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Work Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">Noblis</li>
+                </ul>
+            </div>` 
         },
         java: { 
             name: "Java", 
-            details: `<ul>
-                <li>CS159: Advanced Programming</li>
-                <li>CS240: Algorithms and Data Structures</li>
-                <li>CS345: Software Engineering</li>
-                <li>CS327: Discrete Structures II</li>
-            </ul>` 
+            details: `<div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Class Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">CS159: Advanced Programming</li>
+                    <li style="margin-bottom: 0.5rem;">CS240: Algorithms and Data Structures</li>
+                    <li style="margin-bottom: 0.5rem;">CS345: Software Engineering</li>
+                    <li style="margin-bottom: 0.5rem;">CS327: Discrete Structures II</li>
+                </ul>
+            </div>` 
         },
         docker: { 
             name: "Docker", 
-            details: `<ul>
-                <li>Experience: Noblis</li>
-            </ul>` 
+            details: `<div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Work Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">Noblis</li>
+                </ul>
+            </div>` 
         },
         html: { 
             name: "HTML", 
-            details: `<ul>
-                <li>CS343: Application Development</li>
-                <li>Project: Personal Tech Support Website</li>
-                <li>Project: Personal Portfolio</li>
-                <li>Project: NoXcuses Web Application</li>
-                <li>Project: Today in History Calendar</li>
-            </ul>` 
+            details: `<div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Class Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">CS343: Application Development</li>
+                </ul>
+            </div>
+            <div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Project Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">Personal Tech Support Website</li>
+                    <li style="margin-bottom: 0.5rem;">Personal Portfolio</li>
+                    <li style="margin-bottom: 0.5rem;">NoXcuses Web Application</li>
+                    <li style="margin-bottom: 0.5rem;">Today in History Calendar</li>
+                </ul>
+            </div>` 
         },
         css: { 
             name: "CSS", 
-            details: `<ul>
-                <li>CS343: Application Development</li>
-                <li>Project: Personal Tech Support Website</li>
-                <li>Project: Personal Portfolio</li>
-                <li>Project: NoXcuses Web Application</li>
-                <li>Project: Today in History Calendar</li>
-            </ul>` 
+            details: `<div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Class Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">CS343: Application Development</li>
+                </ul>
+            </div>
+            <div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Project Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">Personal Tech Support Website</li>
+                    <li style="margin-bottom: 0.5rem;">Personal Portfolio</li>
+                    <li style="margin-bottom: 0.5rem;">NoXcuses Web Application</li>
+                    <li style="margin-bottom: 0.5rem;">Today in History Calendar</li>
+                </ul>
+            </div>` 
         },
         javascript: { 
             name: "JavaScript", 
-            details: `<ul>
-                <li>CS343: Application Development</li>
-                <li>Project: Personal Tech Support Website</li>
-                <li>Project: Personal Portfolio</li>
-                <li>Project: NoXcuses Web Application</li>
-                <li>Project: Today in History Calendar</li>
-            </ul>` 
+            details: `<div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Class Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">CS343: Application Development</li>
+                </ul>
+            </div>
+            <div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Project Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">Personal Tech Support Website</li>
+                    <li style="margin-bottom: 0.5rem;">Personal Portfolio</li>
+                    <li style="margin-bottom: 0.5rem;">NoXcuses Web Application</li>
+                    <li style="margin-bottom: 0.5rem;">Today in History Calendar</li>
+                </ul>
+            </div>` 
         },
         c: { 
             name: "C", 
-            details: `<ul>
-                <li>CS261: Computer Systems I</li>
-                <li>CS361: Computer Systems II</li>
-            </ul>` 
+            details: `<div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Class Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">CS261: Computer Systems I</li>
+                    <li style="margin-bottom: 0.5rem;">CS361: Computer Systems II</li>
+                </ul>
+            </div>` 
         },
         rust: { 
             name: "Rust", 
-            details: `<ul>
-                <li>CS430: Programming Languages</li>
-            </ul>` 
+            details: `<div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Class Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">CS430: Programming Languages</li>
+                </ul>
+            </div>` 
         },
         git: {
             name: "Git", 
-            details: `<ul>
-                <li>Experience: Noblis</li>
-                <li>CS345: Software Engineering</li>
-                <li>CS430: Programming Languages</li>
-                <li>CS343: Application Development</li>
-                <li>CS361: Computer Systems II</li>
-                <li>CS374: Database Systems</li>
-                <li>Project: NoXcuses Web Application</li>
-                <li>Project: Personal Portfolio</li>
-                <li>Project: Personal Tech Support Website</li>
-            </ul>`
+            details: `<div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Class Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">CS345: Software Engineering</li>
+                    <li style="margin-bottom: 0.5rem;">CS430: Programming Languages</li>
+                    <li style="margin-bottom: 0.5rem;">CS343: Application Development</li>
+                    <li style="margin-bottom: 0.5rem;">CS361: Computer Systems II</li>
+                    <li style="margin-bottom: 0.5rem;">CS374: Database Systems</li>
+                </ul>
+            </div>
+            <div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Work Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">Noblis</li>
+                </ul>
+            </div>
+            <div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Project Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">NoXcuses Web Application</li>
+                    <li style="margin-bottom: 0.5rem;">Personal Portfolio</li>
+                    <li style="margin-bottom: 0.5rem;">Personal Tech Support Website</li>
+                </ul>
+            </div>`
         },
         matplotlib: { 
             name: "Matplotlib", 
-            details: `<ul>
-                <li>DATA200: Introduction to Data Science</li>
-                <li>CS452: Algorithm Design</li>
-                <li>Project: Max Clique NP-Complete Problem</li>
-            </ul>` 
+            details: `<div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Class Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">DATA200: Introduction to Data Science</li>
+                    <li style="margin-bottom: 0.5rem;">CS452: Algorithm Design</li>
+                </ul>
+            </div>
+            <div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Project Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">Max Clique NP-Complete Problem</li>
+                </ul>
+            </div>` 
         },
         latex: { 
             name: "LaTeX", 
-            details: `<ul>
-                <li>DATA200: Introduction to Data Science</li>
-            </ul>` 
+            details: `<div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Class Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">DATA200: Introduction to Data Science</li>
+                </ul>
+            </div>` 
         },
         kafka: { 
             name: "Apache Kafka", 
-            details: `<ul>
-                <li>Experience: Noblis</li>
-            </ul>` 
+            details: `<div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Work Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">Noblis</li>
+                </ul>
+            </div>` 
         },
         ruby: { 
             name: "Ruby", 
-            details: `<ul>
-                <li>Project: Terminal Spreadsheet Project</li>
-                <li>CS430: Application Development</li>
-            </ul>` 
+            details: `<div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Class Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">CS430: Application Development</li>
+                </ul>
+            </div>
+            <div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Project Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">Terminal Spreadsheet Project</li>
+                </ul>
+            </div>` 
         }
     };
   
