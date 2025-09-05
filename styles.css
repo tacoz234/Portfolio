@@ -61,6 +61,12 @@ body {
     font-size: 1.5rem;
     color: #fff;
     font-family: 'Source Code Pro', monospace;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.logo:hover {
+    color: var(--secondary-color);
 }
 
 .nav-links {

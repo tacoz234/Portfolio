@@ -462,5 +462,13 @@ document.addEventListener("DOMContentLoaded", function () {
         document.documentElement.classList.remove('no-scroll');
       }
     });
+
+    const logo = document.querySelector('.logo');
+    logo.addEventListener('click', function() {
+        nav.classList.remove('active');
+        burger.classList.remove('active');
+        smoothScrollTo(0);
+    });
 });
+
   
