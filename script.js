@@ -402,7 +402,26 @@ document.addEventListener("DOMContentLoaded", function () {
                     <li style="margin-bottom: 0.5rem;">Terminal Spreadsheet Project</li>
                 </ul>
             </div>` 
-        }
+        },
+        numpy: { 
+            name: "NumPy", 
+            details: `<div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Class Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">DATA200: Introduction to Data Science</li>
+                    <li style="margin-bottom: 0.5rem;">CS445: Machine Learning</li>
+                </ul>
+            </div>` 
+        },
+        sql: { 
+            name: "SQL", 
+            details: `<div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Class Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">CS374: Database Systems</li>
+                </ul>
+            </div>` 
+        },
     };
   
     const techItems = document.querySelectorAll('.tech-item[data-tool]');

@@ -184,7 +184,7 @@ body {
 }
 
 .company-name {
-    color: var(--primary-color);
+    color: #e0e0e0;
     font-weight: 500;
     margin-bottom: 0.25rem;
 }
@@ -232,7 +232,7 @@ body {
 }
 
 .university-name {
-    color: var(--primary-color);
+    color: #e0e0e0;
     font-weight: 500;
     margin-bottom: 0.25rem;
 }
@@ -766,4 +766,10 @@ h1, h2, h3, h4, h5, h6,
 
 .tech-carousel .tech-item img {
     filter: brightness(0) invert(1);
+}
+
+/* Remove filter for colored PNG images */
+.tech-carousel .tech-item img[alt="SQL"],
+.tech-carousel .tech-item img[alt="NumPy"] {
+    filter: none;
 }
