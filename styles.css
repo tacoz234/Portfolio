@@ -6,6 +6,16 @@
     --text-color: #333;
     --light-bg: #f5f6fa;
     --transition: all 0.3s ease;
+    --modal-max-width: 960px;
+    --modal-padding-desktop: 2rem;
+    --modal-padding-mobile: 1rem;
+    --modal-radius: 16px;
+    --modal-gap: 1.25rem;
+    --modal-title-size: 1.6rem;
+    --modal-close-size: 2rem;
+    --section-max-width: 900px;
+    --section-padding: 2rem 1rem;
+    --section-gap: 2.5rem;
 }
 
 * {
@@ -72,26 +82,25 @@ body {
 }
 
 .section {
-    padding: 1rem 0.5rem;
+    padding: var(--section-padding);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2.5rem;
+    margin-top: var(--section-gap);
 }
 
 .summary-section + .section {
-    margin-top: 0;
+    margin-top: var(--section-gap);
 }
 
 .container {
-    max-width: 33%;
+    max-width: var(--section-max-width);
     margin: 0 auto;
     width: 100%;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
-/* Animation Classes */
 .reveal-on-scroll {
     opacity: 0;
     transform: translateY(30px);
@@ -109,7 +118,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Projects Section */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -145,17 +153,16 @@ body {
     color: var(--text-color);
 }
 
-/* Experience Section */
 .experience-timeline {
-    max-width: 900px;
-    margin: 0 auto 0 auto; /* Remove top margin */
+    max-width: var(--section-max-width);
+    margin: 2rem auto 0 auto;
     position: relative;
     padding: 0 1rem;
 }
 
 .experience-entry {
     display: block;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .experience-timeline > .experience-entry:last-of-type {
@@ -165,7 +172,7 @@ body {
 .experience-content {
     background: #181818;
     color: #f5f5f5;
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 3px 15px rgba(0,0,0,0.18);
     width: 100%;
@@ -193,7 +200,6 @@ body {
     line-height: 1.6;
 }
 
-/* Contact Section */
 .contact-content {
     display: grid;
     grid-template-columns: 1fr;
@@ -242,7 +248,6 @@ footer {
     color: white;
 }
 
-/* Mobile Navigation */
 .burger {
     display: none;
     cursor: pointer;
@@ -295,11 +300,10 @@ footer {
     }
 }
 
-/* Summary Section Styles */
 .summary-section {
     background: #101010;
     color: #fff;
-    padding: 2rem 1rem 1.5rem 1rem;
+    padding: var(--section-padding);
     margin-top: 60px;
     display: flex;
     justify-content: center;
@@ -307,7 +311,7 @@ footer {
 
 .summary-container {
     width: 100%;
-    max-width: 33%;
+    max-width: var(--section-max-width);
     margin: 0 auto;
     text-align: left;
     border-radius: 16px;
@@ -362,11 +366,9 @@ footer {
     width: max-content;
     align-items: center;
     gap: 0.5rem;
-    /* Add will-change for better performance */
     will-change: transform;
 }
 
-/* Slower, more synchronized animations */
 .tech-track.top {
     animation: scroll-tech-left 40s linear infinite;
 }
@@ -377,13 +379,11 @@ footer {
     animation: scroll-tech-left 50s linear infinite;
 }
 
-/* Smoother pause on hover */
 .tech-carousel:hover .tech-track {
     animation-play-state: paused;
     transition: transform 0.3s ease-out;
 }
 
-/* Improved keyframes with better easing */
 @keyframes scroll-tech-left {
     0% { 
         transform: translateX(0);
@@ -409,9 +409,7 @@ footer {
     min-width: 60px;
     margin: 0 0.5rem;
     opacity: 0.85;
-    /* Smoother transitions */
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-    /* Better performance */
     will-change: transform, opacity;
 }
 
@@ -443,13 +441,11 @@ footer {
     opacity: 1;
 }
 
-/* Add smooth performance optimizations */
 .tech-carousel * {
     transform-style: preserve-3d;
     backface-visibility: hidden;
 }
 
-/* Project Modal Overlay */
 .project-modal-overlay {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -496,13 +492,13 @@ html.no-scroll {
 .project-modal-content {
     background: #181818;
     color: #f5f5f5;
-    border-radius: 16px;
+    border-radius: var(--modal-radius);
     box-shadow: 0 8px 40px rgba(0,0,0,0.35);
-    max-width: 1100px;
-    width: 95%;
+    max-width: var(--modal-max-width);
+    width: 100%;
     max-height: none;
     height: auto;
-    padding: 3rem 2.5rem 2.5rem 2.5rem;
+    padding: var(--modal-padding-desktop);
     position: relative;
     transform: scale(0.7);
     opacity: 0;
@@ -512,17 +508,33 @@ html.no-scroll {
     flex-direction: column;
     justify-content: flex-start;
 }
+.project-modal-content h2,
+#modal-title,
+#tool-modal-title {
+    margin: 0 0 var(--modal-gap) 0;
+    font-size: var(--modal-title-size);
+    line-height: 1.25;
+}
 
-.project-modal-overlay.active .project-modal-content {
-    transform: scale(1);
-    opacity: 1;
+#modal-description,
+#tool-modal-body {
+    margin-top: var(--modal-gap);
+    font-size: 1rem;
+    line-height: 1.55;
+    color: #eaeaea;
+}
+#tool-modal-body ul {
+    margin: 0.5rem 0 0 1.1rem;
+}
+#tool-modal-body li {
+    margin: 0.25rem 0;
 }
 
 #modal-image {
     width: 100%;
     aspect-ratio: 16 / 9;
     background: #222;
-    margin-bottom: 2rem;
+    margin-bottom: var(--modal-gap);
     border-radius: 10px;
     background-size: cover;
     background-position: center;
@@ -544,12 +556,13 @@ html.no-scroll {
 
 @media (max-width: 900px) {
     .project-modal-content {
-        max-width: 98%;
-        height: auto;
-        padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+        max-width: 100%;
+        height: auto;           
+        padding: var(--modal-padding-mobile);
     }
     #modal-image {
-        height: 180px;
+        height: auto;
+        min-height: 180px;
     }
 }
 
@@ -591,9 +604,9 @@ html.no-scroll {
 }
 .project-modal-close {
     position: absolute;
-    top: 1.2rem;
-    right: 1.5rem;
-    font-size: 2rem;
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: var(--modal-close-size);
     color: #fff;
     cursor: pointer;
     z-index: 10;
@@ -604,7 +617,6 @@ html.no-scroll {
     color: var(--secondary-color);
 }
 
-/* Section Headings Font */
 h1, h2, h3, h4, h5, h6,
 .section-title,
 .summary-name,
@@ -618,11 +630,20 @@ h1, h2, h3, h4, h5, h6,
 }
 
 @media (max-width: 768px) {
-  .summary-container, .container {
+  .summary-container, .container, .experience-timeline {
     max-width: 100%;
     width: 100%;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .section {
+    padding: 1.5rem 0.5rem;
+    margin-top: 2rem;
+  }
+  
+  .summary-section {
+    padding: 1.5rem 0.5rem;
   }
 }
 
