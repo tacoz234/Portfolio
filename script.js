@@ -210,19 +210,115 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // ======= Tool Modal =======
     const toolInfo = {
-      python: { name: "Python", details: `<ul><li>CS452: Algorithm Design</li><li>CS149: Intro to Programming</li><li>DATA200: Introduction to Data Science</li><li>Experience: Noblis</li></ul>` },
-      java: { name: "Java", details: `<ul><li>CS159: Intro to Programming</li><li>CS240: Data Structures and Algorithms</li><li>CS345: Software Engineering</li><li>CS327: Discrete Structures II</li></ul>` },
-      docker: { name: "Docker", details: `<ul><li>Experience: Noblis</li><li>Personal: Containerized Tech Support Website</li></ul>` },
-      html: { name: "HTML", details: "<ul><li>CS343: Application Development</li><li>Project: Personal Tech Support Website</li><li>Project: Personal Portfolio</li></ul>" },
-      css: { name: "CSS", details: "<ul><li>CS343: Application Development</li><li>Project: Personal Tech Support Website</li><li>Project: Personal Portfolio</li></ul>" },
-      javascript: { name: "JavaScript", details: "<ul><li>CS343: Application Development</li><li>Project: Personal Tech Support Website</li><li>Project: Personal Portfolio</li></ul>" },
-      c: { name: "C", details: "<ul><li>CS261: Systems</li><li>CS361: Systems</li></ul>" },
-      rust: { name: "Rust", details: "<ul><li>CS430: Programming Languages</li></ul>" },
-      git: {name: "Git", details: "<ul><li>Experience: Noblis</li><li>CS345: Software Engineering</li><li>CS430: Programming Languages</li></ul>"},
-      matplotlib: { name: "Matplotlib", details: "<ul><li>DATA200: Introduction to Data Science</li><li>CS452: Algorithm Design</li><li>Personal: Data Visualization Projects</li></ul>" },
-      latex: { name: "LaTeX", details: "<ul><li>CS452: Algorithm Design - Research Papers</li><li>Academic: Technical Documentation</li><li>Personal: Resume and Documents</li></ul>" },
-      kafka: { name: "Apache Kafka", details: "<ul><li>Experience: Noblis - Data Streaming</li><li>Personal: Event-Driven Architecture Projects</li></ul>" },
-      ruby: { name: "Ruby", details: "<ul><li>Personal: Terminal Spreadsheet Project</li><li>CS343: Application Development</li></ul>" }
+        python: { 
+            name: "Python", 
+            details: `<ul>
+                <li>CS452: Design and Analysis of Algorithms</li>
+                <li>CS149: Introduction to Programming</li>
+                <li>DATA200: Introduction to Data Science</li>
+                <li>CS445: Machine Learning</li>
+                <li>Experience: Noblis</li>
+            </ul>` 
+        },
+        java: { 
+            name: "Java", 
+            details: `<ul>
+                <li>CS159: Advanced Programming</li>
+                <li>CS240: Algorithms and Data Structures</li>
+                <li>CS345: Software Engineering</li>
+                <li>CS327: Discrete Structures II</li>
+            </ul>` 
+        },
+        docker: { 
+            name: "Docker", 
+            details: `<ul>
+                <li>Experience: Noblis</li>
+            </ul>` 
+        },
+        html: { 
+            name: "HTML", 
+            details: `<ul>
+                <li>CS343: Application Development</li>
+                <li>Project: Personal Tech Support Website</li>
+                <li>Project: Personal Portfolio</li>
+                <li>Project: NoXcuses Web Application</li>
+                <li>Project: Today in History Calendar</li>
+            </ul>` 
+        },
+        css: { 
+            name: "CSS", 
+            details: `<ul>
+                <li>CS343: Application Development</li>
+                <li>Project: Personal Tech Support Website</li>
+                <li>Project: Personal Portfolio</li>
+                <li>Project: NoXcuses Web Application</li>
+                <li>Project: Today in History Calendar</li>
+            </ul>` 
+        },
+        javascript: { 
+            name: "JavaScript", 
+            details: `<ul>
+                <li>CS343: Application Development</li>
+                <li>Project: Personal Tech Support Website</li>
+                <li>Project: Personal Portfolio</li>
+                <li>Project: NoXcuses Web Application</li>
+                <li>Project: Today in History Calendar</li>
+            </ul>` 
+        },
+        c: { 
+            name: "C", 
+            details: `<ul>
+                <li>CS261: Computer Systems I</li>
+                <li>CS361: Computer Systems II</li>
+            </ul>` 
+        },
+        rust: { 
+            name: "Rust", 
+            details: `<ul>
+                <li>CS430: Programming Languages</li>
+            </ul>` 
+        },
+        git: {
+            name: "Git", 
+            details: `<ul>
+                <li>Experience: Noblis</li>
+                <li>CS345: Software Engineering</li>
+                <li>CS430: Programming Languages</li>
+                <li>CS343: Application Development</li>
+                <li>CS361: Computer Systems II</li>
+                <li>CS374: Database Systems</li>
+                <li>Project: NoXcuses Web Application</li>
+                <li>Project: Personal Portfolio</li>
+                <li>Project: Personal Tech Support Website</li>
+            </ul>`
+        },
+        matplotlib: { 
+            name: "Matplotlib", 
+            details: `<ul>
+                <li>DATA200: Introduction to Data Science</li>
+                <li>CS452: Algorithm Design</li>
+                <li>Project: Max Clique NP-Complete Problem</li>
+            </ul>` 
+        },
+        latex: { 
+            name: "LaTeX", 
+            details: `<ul>
+                <li>DATA200: Introduction to Data Science</li>
+            </ul>` 
+        },
+        kafka: { 
+            name: "Apache Kafka", 
+            details: `<ul>
+                <li>Experience: Noblis</li>
+            </ul>` 
+        },
+        ruby: { 
+            name: "Ruby", 
+            details: `<ul>
+                <li>Project: Terminal Spreadsheet Project</li>
+                <li>CS430: Application Development</li>
+            </ul>` 
+        }
     };
   
     const techItems = document.querySelectorAll('.tech-item[data-tool]');
