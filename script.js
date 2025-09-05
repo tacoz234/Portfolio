@@ -219,6 +219,10 @@ document.addEventListener("DOMContentLoaded", function () {
       c: { name: "C", details: "<ul><li>CS261: Systems</li><li>CS361: Systems</li></ul>" },
       rust: { name: "Rust", details: "<ul><li>CS430: Programming Languages</li></ul>" },
       git: {name: "Git", details: "<ul><li>Experience: Noblis</li><li>CS345: Software Engineering</li><li>CS430: Programming Languages</li></ul>"},
+      matplotlib: { name: "Matplotlib", details: "<ul><li>DATA200: Introduction to Data Science</li><li>CS452: Algorithm Design</li><li>Personal: Data Visualization Projects</li></ul>" },
+      latex: { name: "LaTeX", details: "<ul><li>CS452: Algorithm Design - Research Papers</li><li>Academic: Technical Documentation</li><li>Personal: Resume and Documents</li></ul>" },
+      kafka: { name: "Apache Kafka", details: "<ul><li>Experience: Noblis - Data Streaming</li><li>Personal: Event-Driven Architecture Projects</li></ul>" },
+      ruby: { name: "Ruby", details: "<ul><li>Personal: Terminal Spreadsheet Project</li><li>CS343: Application Development</li></ul>" }
     };
   
     const techItems = document.querySelectorAll('.tech-item[data-tool]');

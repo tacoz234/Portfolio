@@ -200,6 +200,59 @@ body {
     line-height: 1.6;
 }
 
+/* Education Section */
+.education-timeline {
+    max-width: var(--section-max-width);
+    margin: 2rem auto 0 auto;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.education-entry {
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.education-timeline > .education-entry:last-of-type {
+    margin-bottom: 0;
+}
+
+.education-content {
+    background: #181818;
+    color: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.18);
+    width: 100%;
+}
+
+.education-content h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.university-name {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.gpa {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.education-content ul {
+    margin: 1rem 0 0 1.1rem;
+}
+
+.education-content li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
 .contact-content {
     display: grid;
     grid-template-columns: 1fr;
@@ -500,13 +553,18 @@ html.no-scroll {
     height: auto;
     padding: var(--modal-padding-desktop);
     position: relative;
-    transform: scale(0.7);
+    transform: scale(0.9);
     opacity: 0;
-    transition: transform 1.2s cubic-bezier(.22,1.12,.36,1), opacity 1.2s cubic-bezier(.22,1.12,.36,1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+.project-modal-overlay.active .project-modal-content {
+    transform: scale(1);
+    opacity: 1;
 }
 .project-modal-content h2,
 #modal-title,
