@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             title: "Superman Video Game",
             description: "Developing a Superman-themed video game using Unreal Engine, implementing animation-driven locomotion and special effects with vector math.",
-            video: "assets/Superman Game Demo.mp4"
+            image: "assets/superman.png",
+            video: "assets/superman_game_demo.mp4",
+            github: "https://github.com/coledet/superman-game"
         },
         {
             title: "NoXcuses Web App",
@@ -54,6 +56,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
+
+    // ======= Add special class to NoXcuses project card =======
+    const projectCards = document.querySelectorAll('.project-card');
+    // NoXcuses is the second project (index 1)
+    if (projectCards[1]) {
+        projectCards[1].classList.add('mobile-friendly');
+    }
   
     // ======= Scroll Animation =======
     const observerOptions = {
@@ -148,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const modalImage = document.getElementById('modal-image');
     const modalDescription = document.getElementById('modal-description');
     const closeBtn = document.querySelector('.project-modal-close');
-    const projectCards = document.querySelectorAll('.project-card');
+    // Remove duplicate declaration - reuse projectCards from above
     const supermanLogoBg = document.getElementById('superman-logo-bg');
   
     projectCards.forEach((card, idx) => {
@@ -161,6 +170,15 @@ document.addEventListener("DOMContentLoaded", function () {
   
         if (data.iframe) {
           modalImage.style.backgroundImage = "none";
+          
+          // Check if this is a mobile app iframe (NoXcuses, etc.)
+          const isMobileApp = data.title.includes('NoXcuses') || data.title.includes('Web App');
+          if (isMobileApp) {
+            modalImage.classList.add('portrait');
+          } else {
+            modalImage.classList.remove('portrait');
+          }
+          
           const iframe = document.createElement('iframe');
           iframe.src = data.iframe;
           iframe.width = "100%";
@@ -171,17 +189,104 @@ document.addEventListener("DOMContentLoaded", function () {
           modalImage.appendChild(iframe);
         } else if (data.video) {
           modalImage.style.backgroundImage = "none";
+          
+          // Check if this is a mobile app video (NoXcuses, etc.) or desktop video
+          const isMobileVideo = data.title.includes('NoXcuses') || data.title.includes('Web App');
+          if (isMobileVideo) {
+            modalImage.classList.add('portrait');
+          } else {
+            modalImage.classList.remove('portrait');
+          }
+          
+          // Show loading message
+          modalImage.innerHTML = '<p style="color: #fff; text-align: center; padding: 2rem;">Loading video...</p>';
+          
           const video = document.createElement('video');
           video.src = data.video;
-          video.autoplay = true;
-          video.muted = true;
-          video.loop = true;
+          video.controls = true; // Enable video controls so users can play/pause
+          video.muted = true; // Keep muted for autoplay compatibility
+          video.autoplay = true; // Enable autoplay
+          video.loop = false; // Don't loop by default
           video.playsInline = true;
-          video.controls = false;
-          modalImage.appendChild(video);
+          video.preload = "metadata"; // Load video metadata first
+          video.style.width = "100%";
+          video.style.height = "100%";
+          video.style.objectFit = "contain";
+          
+          // Add comprehensive error handling
+          video.addEventListener('error', function(e) {
+            console.error('Video failed to load:', data.video, e);
+            modalImage.innerHTML = `
+              <div style="color: #fff; text-align: center; padding: 2rem;">
+                <p>Video failed to load</p>
+                <p style="font-size: 0.9rem; color: #ccc; margin-top: 1rem;">
+                  File: ${data.video}
+                </p>
+                <p style="font-size: 0.8rem; color: #999; margin-top: 0.5rem;">
+                  This might be due to file size or format issues
+                </p>
+              </div>
+            `;
+          });
+          
+          // Add loading success handler with autoplay attempt
+          video.addEventListener('loadeddata', function() {
+            console.log('Video loaded successfully:', data.video);
+            modalImage.innerHTML = ""; // Clear loading message
+            modalImage.appendChild(video);
+            
+            // Attempt to autoplay with fallback
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+              playPromise.then(() => {
+                console.log('Video autoplay started successfully');
+              }).catch(error => {
+                console.log('Autoplay was prevented by browser policy:', error);
+                // Show a subtle play button overlay if autoplay fails
+                const playButton = document.createElement('div');
+                playButton.innerHTML = '▶️ Click to play';
+                playButton.style.cssText = `
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  background: rgba(0,0,0,0.7);
+                  color: white;
+                  padding: 10px 20px;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  font-size: 16px;
+                  z-index: 1000;
+                `;
+                playButton.onclick = () => {
+                  video.play();
+                  playButton.remove();
+                };
+                modalImage.style.position = 'relative';
+                modalImage.appendChild(playButton);
+              });
+            }
+          });
+          
+          // Add additional loading states
+          video.addEventListener('loadstart', function() {
+            console.log('Video loading started:', data.video);
+          });
+          
+          video.addEventListener('canplay', function() {
+            console.log('Video can start playing:', data.video);
+          });
+          
+          // Handle network errors
+          video.addEventListener('stalled', function() {
+            console.warn('Video loading stalled:', data.video);
+          });
+          
         } else if (data.image) {
+          modalImage.classList.remove('portrait'); // Remove portrait class for images
           modalImage.style.backgroundImage = `url('${data.image}')`;
         } else {
+          modalImage.classList.remove('portrait');
           modalImage.style.backgroundImage = "none";
         }
   

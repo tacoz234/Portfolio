@@ -664,8 +664,8 @@ html.no-scroll {
 
 #modal-image {
     width: 100%;
-    aspect-ratio: 9 / 16;
-    max-width: 375px;
+    aspect-ratio: 16 / 9; /* Changed from 9/16 to 16/9 for landscape video content */
+    max-width: 800px; /* Increased from 375px to accommodate landscape videos */
     margin: 0 auto;
     background: #222;
     margin-bottom: var(--modal-gap);
@@ -688,6 +688,12 @@ html.no-scroll {
     background: #222;
 }
 
+/* Special handling for mobile/portrait content */
+#modal-image.portrait {
+    aspect-ratio: 9 / 16;
+    max-width: 375px;
+}
+
 @media (max-width: 900px) {
     .project-modal-content {
         max-width: 100%;
@@ -695,8 +701,12 @@ html.no-scroll {
         padding: var(--modal-padding-mobile);
     }
     #modal-image {
-        max-width: 320px; /* Smaller mobile width for smaller screens */
+        max-width: 90%; /* Use percentage for better mobile responsiveness */
         height: auto;
+        min-height: 200px; /* Increased min-height for landscape videos */
+    }
+    #modal-image.portrait {
+        max-width: 320px;
         min-height: 180px;
     }
 }
@@ -706,18 +716,21 @@ html.no-scroll {
     padding: 0.2rem 0 0.7rem 0;
   }
   #modal-image {
-    width: 90%; /* Slightly smaller on very small screens */
-    max-width: 300px;
+    width: 90%;
+    max-width: 90%;
     margin: 0 auto;
     border-radius: 10px;
     border: 1px solid #444;
     background: #222;
-    aspect-ratio: 9 / 16; /* Maintain mobile aspect ratio */
     margin-bottom: 1rem;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  #modal-image.portrait {
+    aspect-ratio: 9 / 16;
+    max-width: 300px;
   }
   #modal-image img,
   #modal-image video,
@@ -786,6 +799,41 @@ h1, h2, h3, h4, h5, h6,
   
   .summary-section {
     padding: 1.5rem 0.5rem;
+  }
+  
+  /* Force desktop view for all project cards except NoXcuses on mobile */
+  .projects-grid {
+      /* Override mobile behavior - force desktop grid layout */
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+      gap: 1.5rem !important;
+      margin-top: 2rem;
+      justify-items: center !important;
+  }
+  
+  .project-card:not(.mobile-friendly) {
+      /* Force desktop sizing for all projects except NoXcuses */
+      min-width: 300px !important;
+      max-width: 350px !important;
+      width: 350px !important;
+      margin: 0 auto !important;
+      flex-shrink: 0 !important;
+  }
+  
+  .project-card.mobile-friendly {
+      /* Allow NoXcuses to be fully responsive on mobile */
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: unset !important;
+      margin: 0 !important;
+  }
+  
+  /* Ensure project images maintain proper aspect ratio */
+  .project-card:not(.mobile-friendly) .project-image {
+      height: 200px !important;
+  }
+  
+  .project-card.mobile-friendly .project-image {
+      height: 250px !important; /* Slightly taller for mobile viewing */
   }
 }
 
