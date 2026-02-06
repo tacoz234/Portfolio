@@ -236,8 +236,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 1rem;">
                   The video file is likely too large for web playback.
                 </p>
-                <a href="${data.video}" target="_blank" style="display: inline-block; padding: 0.8rem 1.5rem; background: #e74c3c; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.3s;">
-                  Download / Watch Video File
+                <a href="${data.video}" download target="_blank" style="display: inline-block; padding: 0.8rem 1.5rem; background: #e74c3c; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.3s;">
+                  Download Video
                 </a>
               </div>
             `;
