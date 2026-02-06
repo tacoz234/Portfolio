@@ -1,11 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     const projectDetails = [
         {
+            title: "NoXcuses iOS App",
+            description: "Developing a fitness tracking iOS application using SwiftUI, Core Data, and Firebase. Features include user authentication, workout logging, and progress visualization. Currently in the testing phase with a small user base.",
+            image: "assets/noxcusesios.png",
+            video: "assets/noxcuses.mp4",
+        },
+        {
             title: "Superman Video Game",
             description: "Developing a Superman-themed video game using Unreal Engine, implementing animation-driven locomotion and special effects with vector math.",
             image: "assets/superman.png",
             video: "assets/superman_game_demo.mp4",
-            github: "https://github.com/coledet/superman-game"
         },
         {
             title: "NoXcuses Web App",
@@ -524,6 +529,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Class Experience</h3>
                 <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
                     <li style="margin-bottom: 0.5rem;">CS374: Database Systems</li>
+                </ul>
+            </div>` 
+        },
+        swift: { 
+            name: "Swift", 
+            details: `<div style="margin-bottom: 2.5rem;">
+                <h3 style="margin-bottom: 1.25rem; font-size: 1.2rem; color: #f5f5f5;">Project Experience</h3>
+                <ul style="margin-left: 2rem; line-height: 2; font-size: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">NoXcuses iOS App</li>
                 </ul>
             </div>` 
         },
