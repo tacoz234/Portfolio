@@ -221,17 +221,31 @@ document.addEventListener("DOMContentLoaded", function () {
           // Add comprehensive error handling
           video.addEventListener('error', function(e) {
             console.error('Video failed to load:', data.video, e);
+            
+            // Fallback to image if available
+            if (data.image) {
+                modalImage.style.backgroundImage = `url('${data.image}')`;
+                modalImage.style.backgroundSize = 'contain';
+                modalImage.style.backgroundRepeat = 'no-repeat';
+                modalImage.style.backgroundPosition = 'center';
+            }
+
             modalImage.innerHTML = `
-              <div style="color: #fff; text-align: center; padding: 2rem;">
-                <p>Video failed to load</p>
-                <p style="font-size: 0.9rem; color: #ccc; margin-top: 1rem;">
-                  File: ${data.video}
+              <div style="background: rgba(0,0,0,0.8); color: #fff; text-align: center; padding: 2rem; border-radius: 10px; max-width: 80%;">
+                <p style="font-weight: bold; margin-bottom: 0.5rem;">Video Preview Unavailable</p>
+                <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 1rem;">
+                  The video file is likely too large for web playback.
                 </p>
-                <p style="font-size: 0.8rem; color: #999; margin-top: 0.5rem;">
-                  This might be due to file size or format issues
-                </p>
+                <a href="${data.video}" target="_blank" style="display: inline-block; padding: 0.8rem 1.5rem; background: #e74c3c; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.3s;">
+                  Download / Watch Video File
+                </a>
               </div>
             `;
+            
+            // Ensure container centers the error message
+            modalImage.style.display = 'flex';
+            modalImage.style.alignItems = 'center';
+            modalImage.style.justifyContent = 'center';
           });
           
           // Add loading success handler with autoplay attempt
