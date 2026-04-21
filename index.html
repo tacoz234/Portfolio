@@ -4,379 +4,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cole Determan</title>
+    <title>Cole Determan — Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="nav-content">
-            <div class="logo">Cole Determan</div>
-            <ul class="nav-links">
-                <!-- <li><a href="#about">About</a></li> -->
-                <li><a href="#what-i-work-with">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="assets/Cole_Determan_Resume.pdf" target="_blank" class="resume-btn">Resume</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </div>
+    <!-- Floating Bottom Navigation -->
+    <nav class="nav-pill">
+        <a href="#hero" class="active">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Exp</a>
+        <a href="#projects">Work</a>
+        <a href="#contact">Contact</a>
+        <a href="assets/Cole_Determan_Resume.pdf" target="_blank">Resume</a>
     </nav>
 
-    <!-- Summary Section: Add this block above the About section -->
-    <section class="summary-section">
-        <div class="summary-container">
-            <div class="summary-header-row">
-                <h1 class="summary-name">Cole Determan</h1>
-                <div class="summary-socials">
-                    <a href="https://github.com/tacoz234" target="_blank" class="social-icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/coledeterman" target="_blank" class="social-icon">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="summary-location">
-                𖡡 Falls Church, VA
-            </div>
-            <div class="summary-about">
-                Computer Science student and incoming M.Eng. candidate at Virginia Tech with experience in full-stack development, API integration, and Agile methodologies. Proven track record of delivering high-impact solutions, including a 1,000% increase in system detections during software engineering internship. Focused on building scalable, user-centric applications using containerized environments and modern architectures.
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="status-badge">
+            <div class="status-dot"></div>
+            AVAILABLE FOR SUMMER 2026 INTERNSHIPS
+        </div>
+        <h1 class="hero-name">Cole Determan</h1>
+        <p class="hero-subtitle">
+            Computer Science student and incoming M.Eng. candidate at Virginia Tech focused on building scalable, user-centric applications.
+        </p>
+    </section>
 
-            </div>
+    <!-- Marquee Skills -->
+    <section id="skills" class="marquee">
+        <div class="marquee-content">
+            <div class="marquee-item" data-tool="python">Python</div>
+            <div class="marquee-item" data-tool="java">Java</div>
+            <div class="marquee-item" data-tool="javascript">JavaScript</div>
+            <div class="marquee-item" data-tool="rust">Rust</div>
+            <div class="marquee-item" data-tool="c">C</div>
+            <div class="marquee-item" data-tool="docker">Docker</div>
+            <div class="marquee-item" data-tool="git">Git</div>
+            <div class="marquee-item" data-tool="kafka">Kafka</div>
+            <div class="marquee-item" data-tool="sql">SQL</div>
+            <div class="marquee-item" data-tool="numpy">NumPy</div>
+            <div class="marquee-item" data-tool="swift">Swift</div>
+            <div class="marquee-item" data-tool="ruby">Ruby</div>
+            <div class="marquee-item" data-tool="latex">LaTeX</div>
+            <!-- Duplicate for loop -->
+            <div class="marquee-item" data-tool="python">Python</div>
+            <div class="marquee-item" data-tool="java">Java</div>
+            <div class="marquee-item" data-tool="javascript">JavaScript</div>
+            <div class="marquee-item" data-tool="rust">Rust</div>
+            <div class="marquee-item" data-tool="c">C</div>
+            <div class="marquee-item" data-tool="docker">Docker</div>
+            <div class="marquee-item" data-tool="git">Git</div>
+            <div class="marquee-item" data-tool="kafka">Kafka</div>
+            <div class="marquee-item" data-tool="sql">SQL</div>
+            <div class="marquee-item" data-tool="numpy">NumPy</div>
+            <div class="marquee-item" data-tool="swift">Swift</div>
+            <div class="marquee-item" data-tool="ruby">Ruby</div>
+            <div class="marquee-item" data-tool="latex">LaTeX</div>
         </div>
     </section>
 
-    <!-- What I Work With Section (Carousel) -->
-    <section id="what-i-work-with" class="section">
-        <div class="container">
-            <h2 class="section-title">What I Work With</h2>
-            <div class="tech-carousel">
-                <div class="tech-track top">
-                    <!-- First set -->
-                    <div class="tech-item" data-tool="html"><img src="assets/html.svg" alt="HTML"><span>HTML</span>
-                    </div>
-                    <div class="tech-item" data-tool="css"><img src="assets/css.svg" alt="CSS"><span>CSS</span></div>
-                    <div class="tech-item" data-tool="sql"><img src="assets/sql.png" alt="SQL"><span>SQL</span></div>
-                    <div class="tech-item" data-tool="numpy"><img src="assets/numpy.png" alt="NumPy"><span>NumPy</span></div>
-                    <div class="tech-item" data-tool="javascript"><img src="assets/javascript.svg"
-                            alt="Javascript"><span>JS</span></div>
-                    <div class="tech-item" data-tool="python"><img src="assets/python.svg"
-                            alt="Python"><span>Python</span></div>
-                    <div class="tech-item" data-tool="java"><img src="assets/java.svg" alt="Java"><span>Java</span>
-                    </div>
-                    <div class="tech-item" data-tool="c"><img src="assets/c.png" alt="C"><span>C</span></div>
-                    <div class="tech-item" data-tool="rust"><img src="assets/rust.svg" alt="Rust"><span>Rust</span>
-                    </div>
-                    <div class="tech-item" data-tool="docker"><img src="assets/docker.png"
-                            alt="Docker"><span>Docker</span></div>
-                    <div class="tech-item" data-tool="git"><img src="assets/git.svg" alt="Git"><span>Git</span></div>
-                    <div class="tech-item" data-tool="kafka"><img src="assets/kafka.png" alt="Kafka"><span>Kafka</span>
-                    </div>
-                    <div class="tech-item" data-tool="matplotlib"><img src="assets/matplotlib.png"
-                            alt="Matplotlib"><span>Matplotlib</span></div>
-                    <div class="tech-item" data-tool="ruby"><img src="assets/ruby.svg" alt="Ruby"><span>Ruby</span>
-                    </div>
-                    <div class="tech-item" data-tool="latex"><img src="assets/latex.png" alt="Latex"><span>LaTeX</span>
-                    </div>
-                    <div class="tech-item" data-tool="swift"><img src="assets/swift.svg" alt="Swift"><span>Swift</span>
-                    </div>
-                    <!-- Duplicate set for seamless scroll -->
-                    <div class="tech-item" data-tool="html"><img src="assets/html.svg" alt="HTML"><span>HTML</span>
-                    </div>
-                    <div class="tech-item" data-tool="css"><img src="assets/css.svg" alt="CSS"><span>CSS</span></div>
-                    <div class="tech-item" data-tool="sql"><img src="assets/sql.png" alt="SQL"><span>SQL</span></div>
-                    <div class="tech-item" data-tool="numpy"><img src="assets/numpy.png" alt="NumPy"><span>NumPy</span></div>
-                    <div class="tech-item" data-tool="javascript"><img src="assets/javascript.svg"
-                            alt="Javascript"><span>JS</span></div>
-                    <div class="tech-item" data-tool="python"><img src="assets/python.svg"
-                            alt="Python"><span>Python</span></div>
-                    <div class="tech-item" data-tool="java"><img src="assets/java.svg" alt="Java"><span>Java</span>
-                    </div>
-                    <div class="tech-item" data-tool="c"><img src="assets/c.png" alt="C"><span>C</span></div>
-                    <div class="tech-item" data-tool="rust"><img src="assets/rust.svg" alt="Rust"><span>Rust</span>
-                    </div>
-                    <div class="tech-item" data-tool="docker"><img src="assets/docker.png"
-                            alt="Docker"><span>Docker</span></div>
-                    <div class="tech-item" data-tool="git"><img src="assets/git.svg" alt="Git"><span>Git</span></div>
-                    <div class="tech-item" data-tool="kafka"><img src="assets/kafka.png" alt="Kafka"><span>Kafka</span>
-                    </div>
-                    <div class="tech-item" data-tool="matplotlib"><img src="assets/matplotlib.png"
-                            alt="Matplotlib"><span>Matplotlib</span></div>
-                    <div class="tech-item" data-tool="ruby"><img src="assets/ruby.svg" alt="Ruby"><span>Ruby</span>
-                    </div>
-                    <div class="tech-item" data-tool="latex"><img src="assets/latex.png" alt="Latex"><span>LaTeX</span>
-                    </div>
-                    <div class="tech-item" data-tool="swift"><img src="assets/swift.svg" alt="Swift"><span>Swift</span>
-                    </div>
+    <div class="container">
+        <!-- Experience & Education Log -->
+        <section id="experience" class="log-section">
+            <div class="log-label">Experience</div>
+            <div class="log-entries">
+                <div class="log-entry">
+                    <div class="log-date">July 2025 — Present</div>
+                    <h3 class="log-title">Technical Intern</h3>
+                    <div class="log-company">ManTech — Herndon, VA</div>
+                    <ul class="log-details">
+                        <li>IT support using ServiceNow, Okta Admin, and Asana for 50+ users.</li>
+                        <li>Created AI-powered knowledge base using NotebookLM.</li>
+                        <li>Reduced resolution times through cross-functional collaboration.</li>
+                    </ul>
                 </div>
-                <div class="tech-track middle">
-                    <div class="tech-item" data-tool="kafka"><img src="assets/kafka.png" alt="Kafka"><span>Kafka</span></div>
-                    <div class="tech-item" data-tool="git"><img src="assets/git.svg" alt="Git"><span>Git</span></div>
-                    <div class="tech-item" data-tool="docker"><img src="assets/docker.png" alt="Docker"><span>Docker</span></div>
-                    <div class="tech-item" data-tool="c"><img src="assets/c.png" alt="C"><span>C</span></div>
-                    <div class="tech-item" data-tool="java"><img src="assets/java.svg" alt="Java"><span>Java</span></div>
-                    <div class="tech-item" data-tool="python"><img src="assets/python.svg" alt="Python"><span>Python</span></div>
-                    <div class="tech-item" data-tool="matplotlib"><img src="assets/matplotlib.png" alt="Matplotlib"><span>Matplotlib</span></div>
-                    <div class="tech-item" data-tool="javascript"><img src="assets/javascript.svg" alt="JavaScript"><span>JS</span></div>
-                    <div class="tech-item" data-tool="css"><img src="assets/css.svg" alt="CSS"><span>CSS3</span></div>
-                    <div class="tech-item" data-tool="sql"><img src="assets/sql.png" alt="SQL"><span>SQL</span></div>   
-                    <div class="tech-item" data-tool="numpy"><img src="assets/numpy.png" alt="NumPy"><span>NumPy</span></div>
-                    <div class="tech-item" data-tool="latex"><img src="assets/latex.png" alt="Latex"><span>LaTeX</span></div>
-                    <div class="tech-item" data-tool="ruby"><img src="assets/ruby.svg" alt="Ruby"><span>Ruby</span></div>
-                    <div class="tech-item" data-tool="html"><img src="assets/html.svg" alt="HTML"><span>HTML</span></div>
-                    <div class="tech-item" data-tool="git"><img src="assets/git.svg" alt="Git"><span>Git</span></div>
-                    <div class="tech-item" data-tool="rust"><img src="assets/rust.svg" alt="Rust"><span>Rust</span></div>
-                    <div class="tech-item" data-tool="swift"><img src="assets/swift.svg" alt="Swift"><span>Swift</span></div>
-                  
-                    <!-- Duplicate set for seamless scroll -->
-                    <div class="tech-item" data-tool="kafka"><img src="assets/kafka.png" alt="Kafka"><span>Kafka</span></div>
-                    <div class="tech-item" data-tool="git"><img src="assets/git.svg" alt="Git"><span>Git</span></div>
-                    <div class="tech-item" data-tool="docker"><img src="assets/docker.png" alt="Docker"><span>Docker</span></div>
-                    <div class="tech-item" data-tool="c"><img src="assets/c.png" alt="C"><span>C</span></div>
-                    <div class="tech-item" data-tool="java"><img src="assets/java.svg" alt="Java"><span>Java</span></div>
-                    <div class="tech-item" data-tool="python"><img src="assets/python.svg" alt="Python"><span>Python</span></div>
-                    <div class="tech-item" data-tool="matplotlib"><img src="assets/matplotlib.png" alt="Matplotlib"><span>Matplotlib</span></div>
-                    <div class="tech-item" data-tool="javascript"><img src="assets/javascript.svg" alt="JavaScript"><span>JS</span></div>
-                    <div class="tech-item" data-tool="css"><img src="assets/css.svg" alt="CSS"><span>CSS3</span></div>
-                    <div class="tech-item" data-tool="sql"><img src="assets/sql.png" alt="SQL"><span>SQL</span></div>   
-                    <div class="tech-item" data-tool="numpy"><img src="assets/numpy.png" alt="NumPy"><span>NumPy</span></div>
-                    <div class="tech-item" data-tool="latex"><img src="assets/latex.png" alt="Latex"><span>LaTeX</span></div>
-                    <div class="tech-item" data-tool="ruby"><img src="assets/ruby.svg" alt="Ruby"><span>Ruby</span></div>
-                    <div class="tech-item" data-tool="html"><img src="assets/html.svg" alt="HTML"><span>HTML</span></div>
-                    <div class="tech-item" data-tool="git"><img src="assets/git.svg" alt="Git"><span>Git</span></div>
-                    <div class="tech-item" data-tool="rust"><img src="assets/rust.svg" alt="Rust"><span>Rust</span></div>
-                    <div class="tech-item" data-tool="swift"><img src="assets/swift.svg" alt="Swift"><span>Swift</span></div>
-                  </div>
-                  
-                  <div class="tech-track bottom">
-                    <div class="tech-item" data-tool="python"><img src="assets/python.svg" alt="Python"><span>Python</span></div>
-                    <div class="tech-item" data-tool="java"><img src="assets/java.svg" alt="Java"><span>Java</span></div>
-                    <div class="tech-item" data-tool="ruby"><img src="assets/ruby.svg" alt="Ruby"><span>Ruby</span></div>
-                    <div class="tech-item" data-tool="c"><img src="assets/c.png" alt="C"><span>C</span></div>
-                    <div class="tech-item" data-tool="docker"><img src="assets/docker.png" alt="Docker"><span>Docker</span></div>
-                    <div class="tech-item" data-tool="git"><img src="assets/git.svg" alt="Git"><span>Git</span></div>
-                    <div class="tech-item" data-tool="html"><img src="assets/html.svg" alt="HTML"><span>HTML5</span></div>
-                    <div class="tech-item" data-tool="css"><img src="assets/css.svg" alt="CSS"><span>CSS3</span></div>
-                    <div class="tech-item" data-tool="sql"><img src="assets/sql.png" alt="SQL"><span>SQL</span></div>   
-                    <div class="tech-item" data-tool="numpy"><img src="assets/numpy.png" alt="NumPy"><span>NumPy</span></div>
-                    <div class="tech-item" data-tool="javascript"><img src="assets/javascript.svg" alt="JavaScript"><span>JS</span></div>
-                    <div class="tech-item" data-tool="kafka"><img src="assets/kafka.png" alt="Kafka"><span>Kafka</span></div>
-                    <div class="tech-item" data-tool="matplotlib"><img src="assets/matplotlib.png" alt="Matplotlib"><span>Matplotlib</span></div>
-                    <div class="tech-item" data-tool="rust"><img src="assets/rust.svg" alt="Rust"><span>Rust</span></div>
-                    <div class="tech-item" data-tool="latex"><img src="assets/latex.png" alt="Latex"><span>LaTeX</span></div>
-                    <div class="tech-item" data-tool="swift"><img src="assets/swift.svg" alt="Swift"><span>Swift</span></div>
-                  
-                    <!-- Duplicate set for seamless scroll -->
-                    <div class="tech-item" data-tool="python"><img src="assets/python.svg" alt="Python"><span>Python</span></div>
-                    <div class="tech-item" data-tool="java"><img src="assets/java.svg" alt="Java"><span>Java</span></div>
-                    <div class="tech-item" data-tool="ruby"><img src="assets/ruby.svg" alt="Ruby"><span>Ruby</span></div>
-                    <div class="tech-item" data-tool="c"><img src="assets/c.png" alt="C"><span>C</span></div>
-                    <div class="tech-item" data-tool="docker"><img src="assets/docker.png" alt="Docker"><span>Docker</span></div>
-                    <div class="tech-item" data-tool="git"><img src="assets/git.svg" alt="Git"><span>Git</span></div>
-                    <div class="tech-item" data-tool="html"><img src="assets/html.svg" alt="HTML"><span>HTML5</span></div>
-                    <div class="tech-item" data-tool="css"><img src="assets/css.svg" alt="CSS"><span>CSS3</span></div>
-                    <div class="tech-item" data-tool="sql"><img src="assets/sql.png" alt="SQL"><span>SQL</span></div>   
-                    <div class="tech-item" data-tool="numpy"><img src="assets/numpy.png" alt="NumPy"><span>NumPy</span></div>
-                    <div class="tech-item" data-tool="javascript"><img src="assets/javascript.svg" alt="JavaScript"><span>JS</span></div>
-                    <div class="tech-item" data-tool="kafka"><img src="assets/kafka.png" alt="Kafka"><span>Kafka</span></div>
-                    <div class="tech-item" data-tool="matplotlib"><img src="assets/matplotlib.png" alt="Matplotlib"><span>Matplotlib</span></div>
-                    <div class="tech-item" data-tool="rust"><img src="assets/rust.svg" alt="Rust"><span>Rust</span></div>
-                    <div class="tech-item" data-tool="latex"><img src="assets/latex.png" alt="Latex"><span>LaTeX</span></div>
-                    <div class="tech-item" data-tool="swift"><img src="assets/swift.svg" alt="Swift"><span>Swift</span></div>
-                  </div>
-                  
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="section">
-        <div class="container reveal-on-scroll">
-            <h2>Experience</h2>
-            <div class="experience-timeline">
-
-                <div class="experience-entry">
-                    <div class="experience-content">
-                        <h3>Technical Intern</h3>
-                        <p class="company-name">ManTech - Herndon, VA</p>
-                        <p class="date">July 2025 - Present</p>
-                        <ul>
-                            <li>Provide IT support using ServiceNow, Okta Admin, and Asana, assisting 50+ users with account provisioning, access management, and troubleshooting hardware/software issues, achieving a 100% satisfaction rating.</li>
-                            <li>Create and maintained an AI-powered knowledge base using NotebookLM to streamline troubleshooting and reduce repetitive tasks.</li>
-                            <li>Explain technical troubleshooting steps in clear, non-technical language to ensure understanding by diverse user groups.</li>
-                            <li>Collaborat with cross-functional teams to enhance internal support processes, improving efficiency and reducing resolution times.</li>
-                        </ul>
-
-                    </div>
+                <div class="log-entry">
+                    <div class="log-date">Summer 2024</div>
+                    <h3 class="log-title">Software Engineer Intern</h3>
+                    <div class="log-company">Noblis — Reston, VA</div>
+                    <ul class="log-details">
+                        <li>Integrated REST APIs with Redis and Kafka for AI/ML apps.</li>
+                        <li>Contributed to a 1000% increase in system detections.</li>
+                        <li>Dockerized deployments and managed CI/CD with Git.</li>
+                    </ul>
                 </div>
-
-                <div class="experience-entry">
-                    <div class="experience-content">
-                        <h3>Advanced Technology Engineer Intern (Software Engineer Intern)</h3>
-                        <p class="company-name">Noblis - Reston, VA</p>
-                        <p class="date">Summer 2024</p>
-                        <ul>
-                            <li>Integrated REST APIs into AI/Machine Learning applications leveraging Redis, Kafka, and related technologies to improve system data flow and reliability, contributing to a 1000% increase in detections.</li>
-                            <li>Applied Agile methodologies, participating in daily stand-ups, sprint planning, and retrospective meetings to support backend development.</li>
-                            <li>Utilized Git for version control and Docker for containerized deployments, ensuring consistent and efficient application environments.</li>
-                            <li>Developed unit tests, participated in code reviews, and debugged application issues to maintain software quality</li>
-                        </ul>
-
-                    </div>
-                </div>
-
-                <div class="experience-entry">
-                    <div class="experience-content">
-                        <h3>Owner/Support Team</h3>
-                        <p class="company-name">Determan Tech Help - Falls Church, VA</p>
-                        <p class="date">Summer 2023 - Present</p>
-                        <ul>
-                            <li>Founded and scaled a tech support business assisting 100+ clients with custom PC builds, device setup, and hardware/software troubleshooting, maintaining a 5-star rating from reviews.</li>
-                            <li>Developed a scheduling and review website hosted on a dedicated server using CloudFlare and Node.js.</li>
-                            <li>Designed client-specific technical solutions, optimizing performance and usability for diverse needs.</li>
-                            <li>Translated complex technical concepts into simple, accessible explanations to help clients make informed decisions.</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="education" class="section">
-            <div class="container reveal-on-scroll">
-                <h2>Education</h2>
-                <div class="education-timeline">
-
-                    <div class="education-entry">
-                        <div class="education-content">
-                            <h3>Masters of Engineering in Computer Science & Applications (Accelerated Program)</h3>
-                            <p class="university-name">Virginia Tech University - Alexandria, VA</p>
-                            <p class="date">May 2027</p>
-                        </div>
-                    </div>
-
-                    <div class="education-entry">
-                        <div class="education-content">
-                            <h3>Bachelor of Science in Computer Science, Minor in Data Analytics</h3>
-                            <p class="university-name">James Madison University - Harrisonburg, VA</p>
-                            <p class="date">May 2026</p>
-                            <p class="gpa">GPA: 3.55/4.0</p>
-                            <ul>
-                                <li><strong>Dean's List</strong> – James Madison University, Fall 2022, Spring 2023, Fall 2024 and Spring 2025</li>
-                                <li><strong>Relevant Coursework:</strong> Algorithms & Data Structures, Software Engineering, Object-Oriented Programming, Computer Systems, Programming Languages, Application Development, Data Analysis & Visualization, Machine Learning</li>
-                            </ul>
-                        </div>
-                    </div>
-
+                <div class="log-entry">
+                    <div class="log-date">2023 — Present</div>
+                    <h3 class="log-title">Technical Founder</h3>
+                    <div class="log-company">Determan Tech Help — Falls Church, VA</div>
+                    <ul class="log-details">
+                        <li>Scaled tech support business to 100+ clients with 5-star rating.</li>
+                        <li>Built custom scheduling platform using Node.js and CloudFlare.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-    <section id="projects" class="section">
-        <div class="container reveal-on-scroll">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image"
-                        style="background-image: url('assets/noxcusesios.png'); background-size: cover; background-position: center;">
-                    </div>
-                    <h3>NoXcuses iOS App</h3>
-                    <p>Developing a fitness tracking iOS application using SwiftUI, Core Data, and Firebase. Features include user authentication, workout logging, and progress visualization. Currently in the testing phase with a small user base.</p>
+        <section id="education" class="log-section">
+            <div class="log-label">Education</div>
+            <div class="log-entries">
+                <div class="log-entry">
+                    <div class="log-date">Expected May 2027</div>
+                    <h3 class="log-title">M.Eng. Computer Science</h3>
+                    <div class="log-company">Virginia Tech — Alexandria, VA</div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image"
-                        style="background-image: url('assets/superman.png'); background-size: cover; background-position: center;">
-                    </div>
-                    <h3>Superman Video Game</h3>
-                    <p>Developing a Superman-themed video game using Unreal Engine, implementing animation-driven
-                        locomotion and special effects with vector math.</p>
-                </div>
-                <div class="project-card">
-                    <div class="project-image"
-                        style="background-image: url('assets/noxcuses.png'); background-size: cover; background-position: center;">
-                    </div>
-                    <h3>NoXcuses Web App</h3>
-                    <p>Developing a full-stack workout tracking web application using HTML, CSS, and JavaScript, hosted on a
-                        personal server.</p>
-                </div>
-                <div class="project-card">
-                    <div class="project-image"
-                        style="background-image: url('assets/determantechhelp.png'); background-size: cover; background-position: center;">
-                    </div>
-                    <h3>Determan Tech Help Website</h3>
-                    <p>Developed a website for my tech support company, Determan Tech Help.</p>
-                </div>
-                <div class="project-card">
-                    <div class="project-image"
-                        style="background-image: url('assets/terminal-spreadsheet-demo.png'); background-size: cover; background-position: center;">
-                    </div>
-                    <h3>Terminal Spreadsheet</h3>
-                    <p>Designed and implemented a terminal-based spreadsheet in Ruby.</p>
-                </div>
-                <div class="project-card">
-                    <div class="project-image"
-                        style="background-image: url('assets/maxclique.png'); background-size: cover; background-position: center;">
-                    </div>
-                    <h3>Max Clique NP-Complete Problem</h3>
-                    <p>Developed and analyzed exact and approximate Python algorithms to solve the NP-hard Max Clique
-                        problem using backtracking and greedy heuristics.</p>
-                </div>
-                <div class="project-card">
-                    <div class="project-image"
-                        style="background-image: url('assets/calendar.png'); background-size: cover; background-position: center;">
-                    </div>
-                    <h3>Today in History Calendar</h3>
-                    <p>Designed and developed a responsive, interactive web calendar that integrates Canvas tasks with
-                        historical events.</p>
-                </div>
-                <div class="project-card">
-                    <div class="project-image"
-                        style="background-image: url('assets/mcintoshpowerwash1.png'); background-size: cover; background-position: center;">
-                    </div>
-                    <h3>McIntosh Powerwash Website</h3>
-                    <p>Developed a website for my tech support company, Determan Tech Help.</p>
+                <div class="log-entry">
+                    <div class="log-date">Expected May 2026</div>
+                    <h3 class="log-title">B.S. Computer Science</h3>
+                    <div class="log-company">James Madison University — Harrisonburg, VA</div>
+                    <div class="log-date" style="margin-top: 0.5rem;">GPA: 3.55/4.00 — Dean's List</div>
                 </div>
             </div>
-    </section>
+        </section>
 
-    <section id="contact" class="section">
-        <div class="container reveal-on-scroll">
-            <h2>Contact Me</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:coledeterman@gmail.com">coledeterman@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+15714802068">(571) 480-2068</a>
+        <!-- Projects Grid -->
+        <section id="projects">
+            <div class="log-label" style="margin-bottom: 2rem;">Selected Work</div>
+            <div class="projects-grid-minimal">
+                <div class="project-minimal-card" data-project="nox-ios">
+                    <img src="assets/noxcusesios.png" alt="NoXcuses iOS" class="project-minimal-img">
+                    <div class="project-minimal-info">
+                        <h3>NoXcuses iOS</h3>
+                        <p class="mono">SwiftUI / Firebase</p>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Message" required></textarea>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+                <div class="project-minimal-card" data-project="superman">
+                    <img src="assets/superman.png" alt="Superman Game" class="project-minimal-img">
+                    <div class="project-minimal-info">
+                        <h3>Superman Game</h3>
+                        <p class="mono">Unreal Engine / Vector Math</p>
+                    </div>
+                </div>
+                <div class="project-minimal-card" data-project="nox-web">
+                    <img src="assets/noxcuses.png" alt="NoXcuses Web" class="project-minimal-img">
+                    <div class="project-minimal-info">
+                        <h3>NoXcuses Web</h3>
+                        <p class="mono">Full-Stack / Personal Server</p>
+                    </div>
+                </div>
+                <div class="project-minimal-card" data-project="tech-help">
+                    <img src="assets/determantechhelp.png" alt="Tech Help" class="project-minimal-img">
+                    <div class="project-minimal-info">
+                        <h3>Tech Help Website</h3>
+                        <p class="mono">Node.js / CloudFlare</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Project Modal Overlay -->
+        <!-- Contact -->
+        <section id="contact" style="border-bottom: none; text-align: center;">
+            <h2 class="display-text" style="font-size: clamp(3rem, 10vw, 8rem); margin-bottom: 2rem;">Get in touch</h2>
+            <div class="mono" style="margin-bottom: 4rem;">
+                <a href="mailto:coledeterman@gmail.com" style="color: inherit; text-decoration: none; margin-right: 2rem;">coledeterman@gmail.com</a>
+                <a href="https://linkedin.com/in/coledeterman" target="_blank" style="color: inherit; text-decoration: none;">LinkedIn</a>
+            </div>
+        </section>
+    </div>
 
-    <script src="script.js"></script>
-
+    <!-- Modal for Project Details -->
     <div id="project-modal" class="project-modal-overlay">
         <div class="project-modal-content">
             <span class="project-modal-close">&times;</span>
@@ -385,13 +172,8 @@
             <p id="modal-description"></p>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <div id="tool-modal-overlay" class="project-modal-overlay">
-        <div class="project-modal-content" id="tool-modal-content">
-            <span class="project-modal-close" id="tool-modal-close">&times;</span>
-            <h2 id="tool-modal-title"></h2>
-            <div id="tool-modal-body"></div>
-        </div>
-    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
