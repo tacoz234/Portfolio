@@ -524,6 +524,16 @@ section {
     transform: translateY(0);
 }
 
+.project-hover-icons a {
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--transition-smooth);
+}
+
+.project-hover-icons a:hover {
+    transform: scale(1.15);
+}
+
 .project-hover-icons i {
     background: var(--accent-color);
     color: #000;
@@ -536,6 +546,12 @@ section {
     justify-content: center;
     font-size: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: var(--transition-smooth);
+}
+
+.project-hover-icons a:hover i {
+    background: var(--text-color);
+    color: var(--bg-color);
 }
 
 .project-minimal-img {
@@ -634,4 +650,69 @@ section {
 .tool-modal .project-modal-content {
     height: auto;
     max-width: 600px;
+}
+
+/* Modal Actions */
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.modal-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.8rem;
+    font-size: 0.85rem;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.modal-btn i {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5rem;
+}
+
+.modal-btn.github-btn {
+    background: var(--text-color);
+    color: var(--bg-color);
+    border-color: var(--text-color);
+}
+
+.modal-btn.github-btn:hover {
+    background: var(--accent-color);
+    color: #000;
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(166, 255, 0, 0.25);
+}
+
+.modal-btn.live-btn {
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+
+.modal-btn.live-btn:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .modal-btn.live-btn:hover {
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
 }

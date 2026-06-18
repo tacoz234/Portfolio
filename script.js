@@ -5,8 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const projectDetails = {
-        "nox-ios": {
-            title: "NoXcuses iOS App",
+        "isopod": {
+            title: "Isopod Minecraft Server",
+            tools: ["Docker", "Python", "REST APIs"],
+            description: "Developing a Minecraft server management application using Docker for containerization and a Python backend for server control. Features include automated server startup/shutdown, resource monitoring, and a REST API for interaction.",
+            image: "assets/isopod.png",
+            github: "https://github.com/Isopod-Project/Isopod",
+            live: "https://isopod-project.github.io/Isopod-Website/#tech"
+        },
+        "xact-training": {
+            title: "Xact Training iOS App",
             tools: ["SwiftUI", "Firebase"],
             description: "Developing a fitness tracking iOS application using SwiftUI, Core Data, and Firebase. Features include user authentication, workout logging, and progress visualization. Currently in the testing phase with a small user base.",
             image: "assets/noxcusesios.png",
@@ -22,14 +30,25 @@ document.addEventListener("DOMContentLoaded", function () {
         "nox-web": {
             title: "NoXcuses Web App",
             tools: ["JavaScript", "Node.js"],
-            description: "Developing a full-stack workout tracking web application using HTML, CSS, and JavaScript, hosted on a personal server.<br><a href=\"https://noxcuses.me\" target=\"_blank\">Visit Site</a>",
-            iframe: "https://noxcuses.me"
+            description: "Developing a full-stack workout tracking web application using HTML, CSS, and JavaScript, hosted on a personal server.",
+            iframe: "https://noxcuses.me",
+            github: "https://github.com/tacoz234/NoXcuses-WebApp",
+            live: "https://noxcuses.me"
+        },
+        "brave-icon-changer": {
+            title: "Brave Icon Changer",
+            tools: ["Python", "Tkinter", "Batch"],
+            description: "Developing a desktop application to change the icon of the Brave browser on Windows and MacOS. Features include selecting a custom icon, automatically updating the Brave shortcut, and preserving all browser settings and bookmarks.",
+            image: "assets/brave_icon_changer.png",
+            github: "https://github.com/tacoz234/Custom-Brave-Icons",
         },
         "tech-help": {
             title: "Determan Tech Help Website",
             tools: ["Node.js", "CloudFlare"],
-            description: "Developed a website for my tech support company, Determan Tech Help.<br><a href=\"https://determantechhelp.com\" target=\"_blank\">Visit Site</a>",
-            iframe: "https://determantechhelp.com"
+            description: "Developed a website for my tech support company, Determan Tech Help.",
+            iframe: "https://determantechhelp.com",
+            github: "https://github.com/tacoz234/DetermanTechHelp",
+            live: "https://determantechhelp.com"
         }
     };
 
@@ -144,14 +163,48 @@ document.addEventListener("DOMContentLoaded", function () {
     const modalTitle = document.getElementById('modal-title');
     const modalImage = document.getElementById('modal-image');
     const modalDescription = document.getElementById('modal-description');
+    const modalActions = document.getElementById('modal-actions');
     const closeBtn = document.querySelector('.project-modal-close');
     const projectCards = document.querySelectorAll('.project-minimal-card');
 
     const closeModal = () => {
         modal.classList.remove('active', 'tool-modal');
         document.body.style.overflow = "";
-        modalImage.innerHTML = ""; 
+        modalImage.innerHTML = "";
+        if (modalActions) modalActions.innerHTML = "";
     };
+
+    // ======= Populate Card Hover Quick-Links Dynamically =======
+    projectCards.forEach(card => {
+        const projectId = card.getAttribute('data-project');
+        const data = projectDetails[projectId];
+        if (!data) return;
+
+        const hoverIconsContainer = card.querySelector('.project-hover-icons');
+        if (hoverIconsContainer) {
+            hoverIconsContainer.innerHTML = ""; // Clear static placeholders
+
+            if (data.github) {
+                const link = document.createElement('a');
+                link.href = data.github;
+                link.target = "_blank";
+                link.title = "View GitHub Repository";
+                link.innerHTML = `<i data-lucide="github"></i>`;
+                link.addEventListener('click', (e) => e.stopPropagation());
+                hoverIconsContainer.appendChild(link);
+            }
+
+            if (data.live) {
+                const link = document.createElement('a');
+                link.href = data.live;
+                link.target = "_blank";
+                link.title = "Visit Live Website";
+                link.innerHTML = `<i data-lucide="external-link"></i>`;
+                link.addEventListener('click', (e) => e.stopPropagation());
+                hoverIconsContainer.appendChild(link);
+            }
+        }
+    });
 
     projectCards.forEach(card => {
         card.addEventListener('click', () => {
@@ -185,6 +238,34 @@ document.addEventListener("DOMContentLoaded", function () {
                 modalImage.appendChild(img);
             }
 
+            // Populate modal actions container
+            if (modalActions) {
+                modalActions.innerHTML = "";
+
+                if (data.github) {
+                    const githubBtn = document.createElement('a');
+                    githubBtn.href = data.github;
+                    githubBtn.target = "_blank";
+                    githubBtn.className = "btn modal-btn github-btn";
+                    githubBtn.innerHTML = `<i data-lucide="github"></i> GitHub`;
+                    modalActions.appendChild(githubBtn);
+                }
+
+                if (data.live) {
+                    const liveBtn = document.createElement('a');
+                    liveBtn.href = data.live;
+                    liveBtn.target = "_blank";
+                    liveBtn.className = "btn modal-btn live-btn";
+                    liveBtn.innerHTML = `<i data-lucide="external-link"></i> Visit Site`;
+                    modalActions.appendChild(liveBtn);
+                }
+            }
+
+            // Recreate icons inside dynamically added components
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
             modal.classList.add('active');
             document.body.style.overflow = "hidden";
         });
@@ -200,13 +281,13 @@ document.addEventListener("DOMContentLoaded", function () {
         item.addEventListener('click', (e) => {
             e.stopPropagation();
             const toolId = item.getAttribute('data-tool');
-            
+
             // Highlight projects with this tool
             const toolName = toolInfo[toolId]?.name.toLowerCase();
             projectCards.forEach(card => {
                 const cardTools = projectDetails[card.getAttribute('data-project')]?.tools || [];
                 const matches = cardTools.some(t => t.toLowerCase().includes(toolName));
-                
+
                 if (matches) {
                     card.style.transform = "scale(1.05)";
                     card.style.borderColor = "var(--accent-color)";
