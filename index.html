@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cole Determan — Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body>
+<body data-theme="light">
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
     <!-- Floating Bottom Navigation -->
     <nav class="nav-pill">
         <a href="#hero" class="active">Home</a>
@@ -17,10 +22,13 @@
         <a href="#projects">Work</a>
         <a href="#contact">Contact</a>
         <a href="assets/Cole_Determan_Resume.pdf" target="_blank">Resume</a>
+        <div class="theme-toggle" id="theme-toggle">
+            <i data-lucide="sun" id="theme-icon"></i>
+        </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero">
+    <section id="hero" class="hero reveal">
         <div class="status-badge">
             <div class="status-dot"></div>
             AVAILABLE FOR SUMMER 2026 INTERNSHIPS
@@ -29,6 +37,38 @@
         <p class="hero-subtitle">
             Computer Science student and incoming M.Eng. candidate at Virginia Tech focused on building scalable, user-centric applications.
         </p>
+        <div class="hero-actions">
+            <a href="assets/Cole_Determan_Resume.pdf" target="_blank" class="btn primary">
+                <i data-lucide="download"></i> Download Resume
+            </a>
+            <a href="#projects" class="btn secondary">View Work</a>
+        </div>
+    </section>
+
+    <!-- Quick Stats Bento Grid -->
+    <section class="container reveal">
+        <div class="bento-grid">
+            <div class="bento-item stats-main">
+                <div class="bento-label">Education</div>
+                <div class="bento-value">3.55 GPA</div>
+                <div class="bento-sub">Dean's List @ JMU</div>
+            </div>
+            <div class="bento-item stats-accent">
+                <div class="bento-label">Experience</div>
+                <div class="bento-value">3+</div>
+                <div class="bento-sub">Internships Completed</div>
+            </div>
+            <div class="bento-item">
+                <div class="bento-label">Projects</div>
+                <div class="bento-value">10+</div>
+                <div class="bento-sub">Open Source Repos</div>
+            </div>
+            <div class="bento-item stats-dark">
+                <div class="bento-label">Status</div>
+                <div class="bento-value">Founder</div>
+                <div class="bento-sub">Technical Consultant</div>
+            </div>
+        </div>
     </section>
 
     <!-- Marquee Skills -->
@@ -66,7 +106,7 @@
 
     <div class="container">
         <!-- Experience & Education Log -->
-        <section id="experience" class="log-section">
+        <section id="experience" class="log-section reveal">
             <div class="log-label">Experience</div>
             <div class="log-entries">
                 <div class="log-entry">
@@ -101,7 +141,7 @@
             </div>
         </section>
 
-        <section id="education" class="log-section">
+        <section id="education" class="log-section reveal">
             <div class="log-label">Education</div>
             <div class="log-entries">
                 <div class="log-entry">
@@ -119,7 +159,7 @@
         </section>
 
         <!-- Projects Grid -->
-        <section id="projects">
+        <section id="projects" class="reveal">
             <div class="log-label" style="margin-bottom: 2rem;">Selected Work</div>
             <div class="projects-grid-minimal">
                 <div class="project-minimal-card" data-project="nox-ios">
@@ -128,12 +168,20 @@
                         <h3>NoXcuses iOS</h3>
                         <p class="mono">SwiftUI / Firebase</p>
                     </div>
+                    <div class="project-hover-icons">
+                        <i data-lucide="github"></i>
+                        <i data-lucide="external-link"></i>
+                    </div>
                 </div>
                 <div class="project-minimal-card" data-project="superman">
                     <img src="assets/superman.png" alt="Superman Game" class="project-minimal-img">
                     <div class="project-minimal-info">
                         <h3>Superman Game</h3>
                         <p class="mono">Unreal Engine / Vector Math</p>
+                    </div>
+                    <div class="project-hover-icons">
+                        <i data-lucide="github"></i>
+                        <i data-lucide="play-circle"></i>
                     </div>
                 </div>
                 <div class="project-minimal-card" data-project="nox-web">
@@ -142,6 +190,10 @@
                         <h3>NoXcuses Web</h3>
                         <p class="mono">Full-Stack / Personal Server</p>
                     </div>
+                    <div class="project-hover-icons">
+                        <i data-lucide="github"></i>
+                        <i data-lucide="external-link"></i>
+                    </div>
                 </div>
                 <div class="project-minimal-card" data-project="tech-help">
                     <img src="assets/determantechhelp.png" alt="Tech Help" class="project-minimal-img">
@@ -149,12 +201,16 @@
                         <h3>Tech Help Website</h3>
                         <p class="mono">Node.js / CloudFlare</p>
                     </div>
+                    <div class="project-hover-icons">
+                        <i data-lucide="link"></i>
+                        <i data-lucide="external-link"></i>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact -->
-        <section id="contact" style="border-bottom: none; text-align: center;">
+        <section id="contact" class="reveal" style="border-bottom: none; text-align: center;">
             <h2 class="display-text" style="font-size: clamp(3rem, 10vw, 8rem); margin-bottom: 2rem;">Get in touch</h2>
             <div class="mono" style="margin-bottom: 4rem;">
                 <a href="mailto:coledeterman@gmail.com" style="color: inherit; text-decoration: none; margin-right: 2rem;">coledeterman@gmail.com</a>
