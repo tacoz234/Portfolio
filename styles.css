@@ -215,10 +215,11 @@ section {
 .status-badge {
     font-size: 0.7rem;
     font-weight: 700;
-    background: white;
+    background: #FFFFFF !important;
+    color: #1A1A1A !important;
     padding: 0.4rem 0.8rem;
     border-radius: 100px;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(26, 26, 26, 0.15) !important;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -332,7 +333,8 @@ section {
     padding: 2rem 0;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
-    background: white;
+    background: var(--card-bg);
+    transition: var(--transition-smooth);
 }
 
 .marquee-content {
@@ -360,7 +362,7 @@ section {
 }
 
 .marquee-item:hover {
-    color: var(--text-color);
+    color: var(--text-color) !important;
     opacity: 1;
 }
 
@@ -432,12 +434,25 @@ section {
 }
 
 .stats-dark {
-    background: #000;
-    color: #fff;
+    background: #000000;
+    color: #FFFFFF;
+    transition: var(--transition-smooth);
+}
+
+.stats-dark .bento-label,
+.stats-dark .bento-sub {
+    color: rgba(255, 255, 255, 0.6);
+    transition: var(--transition-smooth);
 }
 
 [data-theme="dark"] .stats-dark {
-    background: #1A1A1A;
+    background: #FFFFFF !important;
+    color: #1A1A1A !important;
+}
+
+[data-theme="dark"] .stats-dark .bento-label,
+[data-theme="dark"] .stats-dark .bento-sub {
+    color: rgba(26, 26, 26, 0.6) !important;
 }
 
 @media (max-width: 992px) {
@@ -594,6 +609,57 @@ section {
     transform: scale(1.05);
 }
 
+.project-minimal-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem 1.5rem 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none; /* Let clicks pass through to card */
+}
+
+.project-minimal-info h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+    color: var(--accent-color); /* Name in green */
+    text-transform: uppercase;
+}
+
+.project-minimal-info p {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Hover Overlay */
+.project-minimal-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.5);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.4s ease;
+}
+
+.project-minimal-card:hover::after {
+    opacity: 1;
+}
+
+.project-minimal-card:hover .project-minimal-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Project Modal Overhaul */
 .project-modal-overlay {
     position: fixed;
@@ -612,13 +678,18 @@ section {
     padding: var(--spacing-md);
 }
 
+[data-theme="dark"] .project-modal-overlay {
+    background: rgba(10, 10, 10, 0.95) !important;
+}
+
 .project-modal-overlay.active {
     opacity: 1;
     pointer-events: auto;
 }
 
 .project-modal-content {
-    background: white;
+    background: var(--card-bg);
+    color: var(--text-color);
     width: 100%;
     max-width: 1000px;
     height: 90vh;
@@ -667,6 +738,21 @@ section {
     font-size: 1.1rem;
     color: var(--secondary-text);
     margin-top: var(--spacing-md);
+}
+
+[data-theme="dark"] .project-modal-content {
+    background: #141414 !important;
+    color: #F5F5F7 !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] #modal-description {
+    color: #A1A1AA !important;
+}
+
+[data-theme="dark"] #modal-image {
+    background: #0A0A0A !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 /* Tool Modal Specifics */
@@ -742,4 +828,23 @@ section {
 
 [data-theme="dark"] .modal-btn.live-btn:hover {
     box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Contact Links Styles */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem; /* Spread out the links nicely */
+    margin-bottom: 4rem;
+}
+
+.contact-links a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.contact-links a:hover {
+    color: var(--accent-color);
 }
