@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, { duration: 500, fill: "forwards" });
     });
 
-    const interactiveElements = document.querySelectorAll('a, .btn, .project-minimal-card, .marquee-item, .theme-toggle');
+    const interactiveElements = document.querySelectorAll('a, .btn, .project-minimal-card, .marquee-item, .theme-toggle, .course-tag');
     interactiveElements.forEach(el => {
         el.addEventListener('mouseenter', () => {
             cursorOutline.style.width = '60px';
