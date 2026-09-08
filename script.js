@@ -18,14 +18,16 @@ document.addEventListener("DOMContentLoaded", function () {
             tools: ["SwiftUI", "Firebase"],
             description: "Developing a fitness tracking iOS application using SwiftUI, Core Data, and Firebase. Features include user authentication, workout logging, and progress visualization. Currently in the testing phase with a small user base.",
             image: "assets/noxcusesios.png",
-            video: "assets/noxcuses.mp4",
+            iframe: "https://www.youtube.com/embed/TONyGMsGS8w",
+            live: "https://youtube.com/shorts/TONyGMsGS8w"
         },
         "superman": {
             title: "Superman Video Game",
             tools: ["Unreal Engine", "C++"],
             description: "Developing a Superman-themed video game using Unreal Engine, implementing animation-driven locomotion and special effects with vector math.",
             image: "assets/superman.png",
-            video: "assets/superman_game_demo.mp4",
+            iframe: "https://www.youtube.com/embed/sT5gcVLFyUU",
+            live: "https://youtu.be/sT5gcVLFyUU"
         },
         "nox-web": {
             title: "NoXcuses Web App",
@@ -49,6 +51,14 @@ document.addEventListener("DOMContentLoaded", function () {
             iframe: "https://determantechhelp.com",
             github: "https://github.com/tacoz234/DetermanTechHelp",
             live: "https://determantechhelp.com"
+        },
+        "terminal-spreadsheet": {
+            title: "Terminal Spreadsheet",
+            tools: ["Ruby"],
+            description: "Designed and implemented a terminal-based spreadsheet application in Ruby.",
+            image: "assets/terminal-spreadsheet-demo.png",
+            iframe: "https://www.youtube.com/embed/OAGlMciHDsc",
+            live: "https://youtu.be/OAGlMciHDsc"
         }
     };
 
@@ -224,6 +234,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 iframe.style.width = "100%";
                 iframe.style.height = "100%";
                 iframe.style.border = "none";
+                iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+                iframe.allowFullscreen = true;
                 modalImage.appendChild(iframe);
             } else if (data.video) {
                 const video = document.createElement('video');
