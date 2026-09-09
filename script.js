@@ -82,9 +82,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const themeToggles = document.querySelectorAll('.theme-toggle');
     const body = document.documentElement;
 
+    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+
+    function updateThemeColor(theme) {
+        if (themeColorMeta) {
+            themeColorMeta.setAttribute('content', theme === 'dark' ? '#141414' : '#FFFFFF');
+        }
+    }
+
     const savedTheme = localStorage.getItem('theme') || 'light';
     body.setAttribute('data-theme', savedTheme);
     updateAllThemeIcons(savedTheme);
+    updateThemeColor(savedTheme);
 
     function toggleTheme() {
         const currentTheme = body.getAttribute('data-theme');
@@ -92,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
         body.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         updateAllThemeIcons(newTheme);
+        updateThemeColor(newTheme);
     }
 
     themeToggles.forEach(toggle => {
