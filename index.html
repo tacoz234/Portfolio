@@ -14,7 +14,36 @@
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
 
-    <!-- Floating Bottom Navigation -->
+    <!-- Mobile Header with Hamburger -->
+    <header class="mobile-header">
+        <a href="#hero" class="mobile-logo">CD</a>
+        <div class="mobile-header-actions">
+            <div class="theme-toggle" id="theme-toggle-mobile" aria-label="Toggle theme">
+                <i data-lucide="sun" id="theme-icon-mobile"></i>
+            </div>
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer / Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+    <nav class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-links">
+            <a href="#hero" class="mobile-nav-link active">Home</a>
+            <a href="#skills" class="mobile-nav-link">Skills</a>
+            <a href="#experience" class="mobile-nav-link">Experience</a>
+            <a href="#education" class="mobile-nav-link">Education</a>
+            <a href="#projects" class="mobile-nav-link">Work</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+            <a href="assets/ColeDetermanResume.pdf" target="_blank" class="mobile-nav-link resume-link">Resume <i data-lucide="external-link"></i></a>
+        </div>
+    </nav>
+
+    <!-- Desktop Floating Bottom Navigation -->
     <nav class="nav-pill">
         <a href="#hero" class="active">Home</a>
         <a href="#skills">Skills</a>
@@ -23,7 +52,7 @@
         <a href="#projects">Work</a>
         <a href="#contact">Contact</a>
         <a href="assets/ColeDetermanResume.pdf" target="_blank">Resume</a>
-        <div class="theme-toggle" id="theme-toggle">
+        <div class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
             <i data-lucide="sun" id="theme-icon"></i>
         </div>
     </nav>

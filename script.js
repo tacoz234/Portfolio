@@ -78,28 +78,79 @@ document.addEventListener("DOMContentLoaded", function () {
         latex: { name: "LaTeX", details: "Professional document preparation for technical reports and academic papers." }
     };
 
-    // ======= Theme Toggle =======
-    const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = document.getElementById('theme-icon');
+    // ======= Theme Toggle (Desktop & Mobile) =======
+    const themeToggles = document.querySelectorAll('.theme-toggle');
     const body = document.documentElement;
 
     const savedTheme = localStorage.getItem('theme') || 'light';
     body.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
+    updateAllThemeIcons(savedTheme);
 
-    themeToggle.addEventListener('click', () => {
+    function toggleTheme() {
         const currentTheme = body.getAttribute('data-theme');
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
         body.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
+        updateAllThemeIcons(newTheme);
+    }
+
+    themeToggles.forEach(toggle => {
+        toggle.addEventListener('click', toggleTheme);
     });
 
-    function updateThemeIcon(theme) {
-        if (!themeIcon) return;
-        themeIcon.setAttribute('data-lucide', theme === 'light' ? 'sun' : 'moon');
+    function updateAllThemeIcons(theme) {
+        const icons = document.querySelectorAll('.theme-toggle i, .theme-toggle svg');
+        icons.forEach(icon => {
+            icon.setAttribute('data-lucide', theme === 'light' ? 'sun' : 'moon');
+        });
         if (typeof lucide !== 'undefined') lucide.createIcons();
     }
+
+    // ======= Mobile Navigation (Hamburger & Drawer) =======
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileOverlay = document.getElementById('mobile-menu-overlay');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    function openMobileMenu() {
+        if (!hamburgerBtn || !mobileMenu || !mobileOverlay) return;
+        hamburgerBtn.classList.add('active');
+        hamburgerBtn.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.add('open');
+        mobileMenu.setAttribute('aria-hidden', 'false');
+        mobileOverlay.classList.add('active');
+        document.body.classList.add('menu-open');
+    }
+
+    function closeMobileMenu() {
+        if (!hamburgerBtn || !mobileMenu || !mobileOverlay) return;
+        hamburgerBtn.classList.remove('active');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+        mobileMenu.classList.remove('open');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        mobileOverlay.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    }
+
+    if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', () => {
+            if (mobileMenu && mobileMenu.classList.contains('open')) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
+        });
+    }
+
+    if (mobileOverlay) {
+        mobileOverlay.addEventListener('click', closeMobileMenu);
+    }
+
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            closeMobileMenu();
+        });
+    });
 
     // ======= Custom Cursor =======
     const cursorDot = document.querySelector('.cursor-dot');
@@ -151,8 +202,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-    // ======= Navigation Pill Active State =======
+    // ======= Navigation Pill & Mobile Active State =======
     const navLinks = document.querySelectorAll('.nav-pill a');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
     const sections = document.querySelectorAll('section[id]');
 
     const sectionObserver = new IntersectionObserver((entries) => {
@@ -162,9 +214,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 navLinks.forEach(link => {
                     link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
                 });
+                mobileLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                });
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.4 });
 
     sections.forEach(section => sectionObserver.observe(section));
 
@@ -185,6 +240,8 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     const GITHUB_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>`;
+
+    const LINK_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>`;
 
     // ======= Populate Card Hover Quick-Links Dynamically =======
     projectCards.forEach(card => {
@@ -211,7 +268,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 link.href = data.live;
                 link.target = "_blank";
                 link.title = "Visit Live Website";
-                link.innerHTML = `<i data-lucide="external-link"></i>`;
+                link.innerHTML = LINK_SVG;
                 link.addEventListener('click', (e) => e.stopPropagation());
                 hoverIconsContainer.appendChild(link);
             }
