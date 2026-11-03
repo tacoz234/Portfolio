@@ -3,95 +3,15 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Cole Determan // Cloud DevOps & Systems Architecture</title>
+    <title>Cole Determan · Cloud DevOps Engineer</title>
     <meta name="description" content="Portfolio of Cole Determan — Junior Cloud DevOps Engineer at KBR & M.Eng. Computer Science candidate at Virginia Tech."/>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
     
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "canvas-base": "#F7F6F2",
-                        "canvas-elevated": "#FFFFFF",
-                        "surface": "#FAF9F5",
-                        "surface-container-lowest": "#FFFFFF",
-                        "surface-container-low": "#F5F4F0",
-                        "surface-container": "#EFEEEA",
-                        "surface-container-high": "#E9E8E4",
-                        "surface-container-highest": "#E3E2DF",
-                        "text-primary": "#111111",
-                        "text-secondary": "#63635E",
-                        "text-muted": "#9C9C96",
-                        "hairline-border": "#E5E5E0",
-                        "hairline-dark": "#D1D1CB",
-                        "primary": "#0028C2",
-                        "primary-container": "#0038FF",
-                        "electric-accent": "#0038FF",
-                        "terminal-green": "#2E9F6E",
-                        "alert-crimson": "#FF3333"
-                    },
-                    fontFamily: {
-                        "headline-lg": ["Space Grotesk", "sans-serif"],
-                        "headline-md": ["Space Grotesk", "sans-serif"],
-                        "headline-sm": ["Space Grotesk", "sans-serif"],
-                        "display-hero": ["Space Grotesk", "sans-serif"],
-                        "display-hero-mobile": ["Space Grotesk", "sans-serif"],
-                        "body-lg": ["Geist", "sans-serif"],
-                        "body-md": ["Geist", "sans-serif"],
-                        "caption": ["Geist", "sans-serif"],
-                        "label-code": ["JetBrains Mono", "monospace"],
-                        "index-numeral": ["JetBrains Mono", "monospace"]
-                    },
-                    fontSize: {
-                        "headline-lg": ["2.75rem", { lineHeight: "1.1", letterSpacing: "-0.03em", fontWeight: "600" }],
-                        "headline-md": ["1.75rem", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600" }],
-                        "headline-sm": ["1.25rem", { lineHeight: "1.25", letterSpacing: "-0.01em", fontWeight: "500" }],
-                        "display-hero": ["4.5rem", { lineHeight: "0.95", letterSpacing: "-0.04em", fontWeight: "700" }],
-                        "display-hero-mobile": ["2.5rem", { lineHeight: "1.0", letterSpacing: "-0.03em", fontWeight: "700" }],
-                        "body-lg": ["1.125rem", { lineHeight: "1.6", letterSpacing: "-0.01em", fontWeight: "400" }],
-                        "body-md": ["0.9375rem", { lineHeight: "1.5", letterSpacing: "-0.005em", fontWeight: "400" }],
-                        "caption": ["0.8125rem", { lineHeight: "1.4", letterSpacing: "0.01em", fontWeight: "400" }],
-                        "label-code": ["0.8125rem", { lineHeight: "1.3", letterSpacing: "0.02em", fontWeight: "500" }],
-                        "index-numeral": ["0.75rem", { lineHeight: "1.0", letterSpacing: "0.05em", fontWeight: "600" }]
-                    }
-                }
-            }
-        };
-    </script>
-    
-    <style>
-        @layer base {
-            html, body {
-                margin: 0;
-                padding: 0;
-            }
-            ::-webkit-scrollbar {
-                display: none;
-            }
-        }
-        .project-row:hover .project-arrow {
-            opacity: 1;
-            transform: translateX(4px);
-        }
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-    </style>
+    <link rel="stylesheet" href="tailwind.css"/>
 </head>
 
 <body class="bg-canvas-base text-text-primary antialiased selection:bg-text-primary selection:text-canvas-elevated">
@@ -103,18 +23,18 @@
             <div class="flex flex-col gap-2">
                 <div class="flex items-center gap-2 mb-1">
                     <span class="w-2 h-2 rounded-full bg-terminal-green animate-pulse"></span>
-                    <span class="font-label-code text-caption uppercase tracking-wider text-text-secondary">SYS_OK // ACTIVE NODE</span>
+                    <span class="font-label-code text-caption uppercase tracking-wider text-text-secondary">Falls Church, VA</span>
                 </div>
                 <h1 class="font-headline-md text-headline-md tracking-tight text-text-primary uppercase font-bold">Cole Determan</h1>
                 <p class="font-body-md text-body-md text-text-secondary leading-snug">
-                    Cloud DevOps Engineer, Infrastructure Architect, &amp; Systems Builder
+                    Cloud DevOps Engineer at KBR &amp; M.Eng. Computer Science student at Virginia Tech
                 </p>
             </div>
 
             <!-- Real-time Status Card -->
             <div class="p-3 bg-surface-container-low border border-hairline-border">
                 <p class="font-label-code text-caption text-text-secondary leading-normal">
-                    <span class="text-primary font-semibold">STATUS:</span> Currently a Junior Cloud DevOps Engineer at KBR focusing on secure cloud infrastructure, CI/CD pipelines, and high-availability systems.
+                    <span class="text-primary font-semibold">NOW:</span> Building AWS infrastructure with Terraform and GitLab CI/CD pipelines at KBR.
                 </p>
             </div>
 
@@ -122,23 +42,18 @@
             <nav id="sidebar-nav" class="flex flex-col gap-1.5 py-4 border-y border-hairline-border">
                 <a class="nav-item uppercase py-1.5 px-2 transition-all flex items-center justify-between text-text-secondary hover:text-text-primary font-label-code text-label-code" href="#experience" data-section="experience">
                     <span>01 / Experience</span>
-                    <span class="font-index-numeral text-index-numeral text-text-muted">[CAREER]</span>
                 </a>
                 <a class="nav-item uppercase py-1.5 px-2 transition-all flex items-center justify-between text-text-secondary hover:text-text-primary font-label-code text-label-code" href="#work" data-section="work">
                     <span>02 / Work</span>
-                    <span class="font-index-numeral text-index-numeral text-text-muted">[PROJ]</span>
                 </a>
                 <a class="nav-item uppercase py-1.5 px-2 transition-all flex items-center justify-between text-text-secondary hover:text-text-primary font-label-code text-label-code" href="#skills" data-section="skills">
                     <span>03 / Skills</span>
-                    <span class="font-index-numeral text-index-numeral text-text-muted">[STACK]</span>
                 </a>
                 <a class="nav-item uppercase py-1.5 px-2 transition-all flex items-center justify-between text-text-secondary hover:text-text-primary font-label-code text-label-code" href="#education" data-section="education">
                     <span>04 / Education</span>
-                    <span class="font-index-numeral text-index-numeral text-text-muted">[ACADEMIC]</span>
                 </a>
                 <a class="nav-item uppercase py-1.5 px-2 transition-all flex items-center justify-between text-text-secondary hover:text-text-primary font-label-code text-label-code" href="#contact" data-section="contact">
                     <span>05 / Contact</span>
-                    <span class="font-index-numeral text-index-numeral text-text-muted">[TRANS]</span>
                 </a>
                 <a class="font-label-code text-label-code uppercase text-primary hover:text-text-primary py-1.5 px-2 transition-all flex items-center justify-between mt-2 pt-2 border-t border-hairline-border" href="assets/ColeDetermanResume.pdf" target="_blank">
                     <span>Download Resume</span>
@@ -157,7 +72,7 @@
                 <a class="hover:text-text-primary transition-colors underline underline-offset-2" href="mailto:coledeterman@gmail.com">Email</a>
             </div>
             <div class="flex items-center justify-between font-label-code text-caption text-text-muted pt-2 border-t border-hairline-border">
-                <span>LOC // FALLS CHURCH, VA (EST)</span>
+                <span>FALLS CHURCH, VA</span>
                 <span>© 2026 COLE DETERMAN</span>
             </div>
         </div>
@@ -185,13 +100,11 @@
         <!-- DESKTOP TOP STATUS BAR -->
         <header class="hidden lg:flex sticky top-0 z-30 h-14 w-full bg-canvas-base/80 backdrop-blur border-b border-hairline-border px-8 items-center justify-between">
             <div class="flex items-center gap-4 font-label-code text-caption text-text-secondary">
-                <span class="text-terminal-green font-semibold">● ONLINE</span>
-                <span>SPEC: CLOUD DEVOPS / SECURE SYSTEMS ARCHITECTURE</span>
+                <span>CLOUD DEVOPS · INFRASTRUCTURE AS CODE · CI/CD</span>
             </div>
             <div class="flex items-center gap-4">
-                <span class="font-label-code text-caption text-text-muted">PORTFOLIO SCHEMATIC v2.5</span>
                 <a href="mailto:coledeterman@gmail.com" class="px-2.5 py-1 bg-text-primary text-canvas-base hover:bg-electric-accent transition-colors font-label-code text-[11px] uppercase tracking-wider">
-                    TRANSMIT DISPATCH
+                    EMAIL ME
                 </a>
             </div>
         </header>
@@ -204,16 +117,13 @@
                 <div class="fixed pointer-events-none opacity-0 z-50 transition-opacity duration-150 ease-out hidden xl:block w-80 bg-surface-container-lowest border border-text-primary shadow-[8px_8px_0px_#111111] overflow-hidden" id="kinetic-preview">
                     <div class="p-3 bg-surface-container-high border-b border-hairline-border flex items-center justify-between">
                         <span class="font-index-numeral text-index-numeral text-text-primary uppercase font-bold" id="preview-id">01 // PREVIEW</span>
-                        <span class="inline-flex items-center gap-1.5 font-label-code text-caption text-terminal-green">
-                            <span class="w-1.5 h-1.5 rounded-full bg-terminal-green animate-ping"></span> LIVE SPEC READY
-                        </span>
+                        <span class="font-label-code text-caption text-text-secondary">CLICK FOR DETAILS</span>
                     </div>
                     <div class="relative h-44 w-full bg-surface-container-highest overflow-hidden">
-                        <img class="w-full h-full object-cover transition-transform duration-300" id="preview-img" src="assets/isopod.png" alt="Project Preview"/>
+                        <img class="w-full h-full object-cover transition-transform duration-300" id="preview-img" src="assets/web/blackout.webp" alt="Project Preview"/>
                         <div class="absolute inset-0 bg-gradient-to-t from-text-primary/70 via-transparent to-transparent"></div>
                         <div class="absolute bottom-2 left-3 right-3 flex justify-between items-end">
                             <span class="font-label-code text-caption text-canvas-base uppercase tracking-wider" id="preview-cat">HYBRID CLOUD</span>
-                            <span class="font-index-numeral text-index-numeral text-canvas-base">SPEC://DETERMAN.SYS</span>
                         </div>
                     </div>
                     <div class="p-4 bg-canvas-elevated flex flex-col gap-2">
@@ -231,16 +141,16 @@
                     <div class="flex flex-col gap-4">
                         <div class="flex flex-wrap items-center gap-3">
                             <span class="inline-block px-2 py-0.5 bg-text-primary text-canvas-base font-label-code text-caption uppercase tracking-wider">
-                                COLE DETERMAN // SPEC SHEET
+                                COLE DETERMAN
                             </span>
                             <span class="font-label-code text-caption text-text-muted">VIRGINIA TECH × KBR INC.</span>
                             <span class="font-label-code text-caption text-primary">FALLS CHURCH / NORTHERN VA</span>
                         </div>
                         <h2 class="font-headline-lg text-headline-lg text-text-primary leading-tight tracking-tight max-w-5xl">
-                            M.Eng. Computer Science candidate at Virginia Tech &amp; Junior Cloud DevOps Engineer at KBR, constructing resilient hybrid infrastructure and low-latency distributed systems.
+                            Junior Cloud DevOps Engineer at KBR and M.Eng. Computer Science student at Virginia Tech. I build cloud infrastructure and the tools around it.
                         </h2>
                         <p class="font-body-lg text-body-lg text-text-secondary max-w-3xl leading-relaxed">
-                            Specializing in zero-trust government cloud modernization, high-throughput streaming architectures (Kafka / Redis), and developer toolchains designed with ruthless Swiss typographic discipline.
+                            Day to day that means AWS, Terraform, Kubernetes, and GitLab CI/CD. Before KBR, I worked on Kafka and Redis data pipelines at Noblis and ran a tech support business with 100+ clients.
                         </p>
                     </div>
 
@@ -264,8 +174,8 @@
                                 <span class="font-index-numeral text-terminal-green">●</span>
                             </span>
                             <div class="mt-4">
-                                <div class="font-display-hero-mobile text-display-hero-mobile font-bold text-text-primary tracking-tight">03+</div>
-                                <div class="font-label-code text-caption text-text-secondary mt-1 uppercase">Defense &amp; R&amp;D Internships</div>
+                                <div class="font-display-hero-mobile text-display-hero-mobile font-bold text-text-primary tracking-tight">3</div>
+                                <div class="font-label-code text-caption text-text-secondary mt-1 uppercase">Internships</div>
                                 <div class="font-caption text-caption text-text-muted">KBR · ManTech · Noblis</div>
                             </div>
                         </div>
@@ -276,9 +186,9 @@
                                 <span class="font-index-numeral text-electric-accent">●</span>
                             </span>
                             <div class="mt-4">
-                                <div class="font-display-hero-mobile text-display-hero-mobile font-bold text-text-primary tracking-tight">10+</div>
-                                <div class="font-label-code text-caption text-text-secondary mt-1 uppercase">Open Source Repos</div>
-                                <div class="font-caption text-caption text-text-muted">Public GitHub Toolchains</div>
+                                <div class="font-display-hero-mobile text-display-hero-mobile font-bold text-text-primary tracking-tight">10</div>
+                                <div class="font-label-code text-caption text-text-secondary mt-1 uppercase">Open-Source Repos</div>
+                                <div class="font-caption text-caption text-text-muted">Public GitHub repositories</div>
                             </div>
                         </div>
 
@@ -299,26 +209,28 @@
                 <!-- SECTION 2: TECH STACK CONTINUOUS TELEMETRY TICKER -->
                 <section class="py-4 border-b border-hairline-border overflow-hidden bg-canvas-base flex items-center gap-4">
                     <div class="font-label-code text-caption uppercase text-text-primary font-bold whitespace-nowrap pl-1 pr-3 border-r border-hairline-border flex items-center gap-1.5">
-                        <span class="w-2 h-2 bg-primary"></span> CORE ENGINE
+                        <span class="w-2 h-2 bg-primary"></span> CORE STACK
                     </div>
                     <div class="flex-1 overflow-x-auto no-scrollbar py-1">
                         <div class="flex items-center gap-2 whitespace-nowrap font-label-code text-caption">
-                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">AWS [GovCloud]</span>
+                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">AWS</span>
                             <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">Terraform</span>
-                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">Docker / Podman</span>
                             <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">Kubernetes</span>
-                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">Python 3.12</span>
-                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">Kafka Streams</span>
-                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">Redis In-Memory</span>
-                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">Rust</span>
-                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">SwiftUI 6</span>
-                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">Node.js</span>
-                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">PostgreSQL</span>
-                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">CI/CD Gitlab/Actions</span>
-                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">ServiceNow</span>
-                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">Linux RHEL / Ubuntu</span>
+                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">Docker</span>
+                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">GitLab CI/CD</span>
+                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">Linux</span>
+                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">Python</span>
                             <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">Java</span>
-                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">C / Systems</span>
+                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">JavaScript</span>
+                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">C</span>
+                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">Rust</span>
+                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">Swift</span>
+                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">Kafka</span>
+                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">Redis</span>
+                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">SQL</span>
+                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">Git</span>
+                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">ServiceNow</span>
+                            <span class="px-2 py-1 bg-surface-container border border-hairline-border text-text-primary font-medium">Okta</span>
                         </div>
                     </div>
                 </section>
@@ -327,11 +239,10 @@
                 <section id="experience" class="py-12 border-b border-hairline-border flex flex-col gap-10">
                     <div class="flex flex-col gap-2">
                         <div class="flex items-center gap-2">
-                            <span class="font-index-numeral text-index-numeral text-text-muted">[LOG: 001_TRAJECTORY]</span>
-                            <span class="font-label-code text-caption text-text-secondary uppercase">INDUSTRY ARCHITECTURE &amp; OPERATIONS</span>
+                            <span class="font-index-numeral text-index-numeral text-text-muted">01</span>
                         </div>
                         <h3 class="font-headline-lg text-headline-lg font-bold uppercase tracking-tight text-text-primary">
-                            Career Telemetry &amp; Deployments
+                            Experience
                         </h3>
                     </div>
 
@@ -347,13 +258,12 @@
                                 <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">Junior Cloud DevOps Engineer</h4>
                                 <span class="font-label-code text-caption text-primary font-semibold">KBR INC.</span>
                                 <p class="font-body-md text-caption text-text-secondary leading-normal">
-                                    Supporting mission-critical government cloud modernization efforts, automating secure hybrid cloud environments, collaborating with architecture and software teams to modernize enterprise workloads, and implementing DevOps best practices.
-                                </p>
+                                    Provisioning AWS infrastructure with Terraform, building and maintaining GitLab CI/CD pipelines for containerized applications, and supporting Docker and Kubernetes workflows across development and staging environments.</p>
                             </div>
                             <div class="pt-4 border-t border-hairline-border flex flex-wrap gap-1.5 font-label-code text-[11px]">
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#GovCloud</span>
+                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#GitLabCI</span>
                                 <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#Terraform</span>
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#ZeroTrust</span>
+                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#Kubernetes</span>
                                 <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#AWS</span>
                             </div>
                         </div>
@@ -382,14 +292,13 @@
                         <div class="p-6 bg-surface-container-lowest border border-hairline-border flex flex-col justify-between gap-6 hover:border-text-primary transition-colors">
                             <div class="flex flex-col gap-3">
                                 <div class="flex items-center justify-between font-label-code text-caption">
-                                    <span class="px-2 py-0.5 bg-surface-container text-text-primary uppercase font-semibold">JUL 2025 — PRESENT</span>
+                                    <span class="px-2 py-0.5 bg-surface-container text-text-primary uppercase font-semibold">JUL 2025 — MAY 2026</span>
                                     <span class="text-text-muted">HERNDON, VA</span>
                                 </div>
-                                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">Technical Intern</h4>
+                                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">Technical Support Intern</h4>
                                 <span class="font-label-code text-caption text-text-primary font-semibold">MANTECH</span>
                                 <p class="font-body-md text-caption text-text-secondary leading-normal">
-                                    Provided enterprise IT systems support using ServiceNow, Okta Admin, and Asana for 50+ staff. Engineered an internal AI knowledge base using Google NotebookLM to streamline IT resolution workflows.
-                                </p>
+                                    Supported 50+ users with account provisioning, access management, and troubleshooting through ServiceNow, Okta, and Asana, keeping satisfaction above 90%. Built an AI-powered knowledge base in NotebookLM for common IT issues.</p>
                             </div>
                             <div class="pt-4 border-t border-hairline-border flex flex-wrap gap-1.5 font-label-code text-[11px]">
                                 <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#ServiceNow</span>
@@ -408,8 +317,7 @@
                                 <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">Software Engineer Intern</h4>
                                 <span class="font-label-code text-caption text-text-primary font-semibold">NOBLIS</span>
                                 <p class="font-body-md text-caption text-text-secondary leading-normal">
-                                    Integrated high-speed REST APIs with Redis and Apache Kafka for production AI/ML event pipelines. Accelerated system detection metrics by 1000% across containerized Docker clusters and CI/CD pipelines.
-                                </p>
+                                    Integrated REST APIs into AI/ML applications using Redis and Kafka, contributing to a 1000% increase in detections. Dockerized deployments, wrote unit tests, and worked in Agile sprints with the backend team.</p>
                             </div>
                             <div class="pt-4 border-t border-hairline-border flex flex-wrap gap-1.5 font-label-code text-[11px]">
                                 <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#Kafka</span>
@@ -425,17 +333,15 @@
                                     <span class="px-2 py-0.5 bg-surface-container text-text-primary uppercase font-semibold">2023 — PRESENT</span>
                                     <span class="text-text-muted">FALLS CHURCH, VA</span>
                                 </div>
-                                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">Technical Founder &amp; Systems Specialist</h4>
+                                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">Founder &amp; Support Specialist</h4>
                                 <span class="font-label-code text-caption text-text-primary font-semibold">DETERMAN TECH HELP</span>
                                 <p class="font-body-md text-caption text-text-secondary leading-normal">
-                                    Founded and scaled an independent IT services company serving 100+ private and business clients with a 5.0-star rating. Engineered an automated scheduling platform using Node.js and Cloudflare edge networking, solving complex systems, security, and hardware requirements.
-                                </p>
+                                    Founded and grew a tech support business to 100+ clients with a 5-star rating, covering custom PC builds, device setup, and troubleshooting. Built the business's booking and reviews website on Node.js, self-hosted behind Cloudflare.</p>
                             </div>
                             <div class="pt-4 border-t border-hairline-border flex flex-wrap gap-1.5 font-label-code text-[11px]">
                                 <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#NodeJS</span>
                                 <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#Cloudflare</span>
                                 <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#100+Clients</span>
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#EdgeOps</span>
                             </div>
                         </div>
 
@@ -447,11 +353,10 @@
                     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-hairline-border pb-6">
                         <div class="flex flex-col gap-2">
                             <div class="flex items-center gap-2">
-                                <span class="font-index-numeral text-index-numeral text-text-muted">[INDEX: 002_SELECTED]</span>
-                                <span class="font-label-code text-caption text-text-secondary uppercase">CATALOGUE OF BUILT WORKS</span>
+                                <span class="font-index-numeral text-index-numeral text-text-muted">02</span>
                             </div>
                             <h3 class="font-headline-lg text-headline-lg font-bold uppercase tracking-tight text-text-primary">
-                                Selected Works
+                                Selected Work
                             </h3>
                         </div>
 
@@ -479,22 +384,19 @@
                     <div class="flex flex-col border-t border-hairline-border" id="project-list">
 
                         <!-- ITEM 01: BLACKOUT -->
-                        <article class="project-row group border-b border-hairline-border py-6 px-3 lg:px-6 transition-all duration-150 hover:bg-canvas-elevated flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
+                        <article tabindex="0" role="button" class="project-row group border-b border-hairline-border py-6 px-3 lg:px-6 transition-all duration-150 hover:bg-canvas-elevated flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
                             data-id="01"
                             data-title="Blackout"
-                            data-domain="Systems Utility / OLED Blackout"
-                            data-desc="A lightweight, pure-black (#000000) full-screen desktop utility built natively for macOS (Swift / AppKit) and Windows (C# / Win32) optimized for OLED displays. Features multi-monitor blackout, menu bar and system tray controls, global hotkeys, smart wake-locks, and automated GitHub Actions release builds."
-                            data-stack="Swift,C#,macOS,Windows,Win32,AppKit"
+                            data-domain="Desktop Utility"
+                            data-desc="A tiny native app that turns any or all displays pure black, built for OLED screens. Written in Swift for macOS and C# for Windows. It lives in the menu bar or system tray, uses essentially no CPU, and updates itself from GitHub Releases."
+                            data-stack="Swift,C#,macOS,Windows,GitHub Actions"
                             data-year="2026"
                             data-cat="systems"
-                            data-img="assets/blackout.png"
+                            data-img="assets/web/blackout.webp"
                             data-github="https://github.com/tacoz234/blackout"
                             data-live="https://github.com/tacoz234/blackout/releases"
                             data-live-text="Releases"
-                            data-sec="SANDBOX / ZERO HOOKS"
-                            data-rel="NATIVE LOW-OVERHEAD"
-                            data-pipe="GITHUB ACTIONS CI/CD"
-                            data-lic="MIT OPEN SOURCE">
+                            data-highlights="Native Swift (macOS) and C# (Windows) apps|Per-display blackout, global hotkey, and auto-exit timer|Self-updater verifies each release against its SHA-256 hash|Builds automated with GitHub Actions; Windows installer via Inno Setup">
                             <div class="flex items-baseline gap-6 md:w-5/12">
                                 <span class="font-index-numeral text-index-numeral text-text-muted group-hover:text-primary transition-colors">01</span>
                                 <div class="flex flex-col">
@@ -502,38 +404,35 @@
                                         Blackout
                                         <span class="font-index-numeral text-index-numeral opacity-0 group-hover:opacity-100 text-primary transition-opacity project-arrow">[↗]</span>
                                     </h4>
-                                    <span class="font-body-md text-caption text-text-secondary mt-0.5">Pure-Black OLED Utility (macOS &amp; Windows)</span>
+                                    <span class="font-body-md text-caption text-text-secondary mt-0.5">Pure-Black Screen Utility for OLED Displays (macOS &amp; Windows)</span>
                                 </div>
                             </div>
                             <div class="md:w-5/12 flex flex-wrap items-center gap-2">
                                 <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Swift</span>
                                 <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">C#</span>
-                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">macOS / Windows</span>
-                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">OLED #000000</span>
+                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">macOS</span>
+                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Windows</span>
                             </div>
                             <div class="md:w-2/12 flex items-center justify-between md:justify-end gap-4 font-index-numeral text-index-numeral text-text-muted group-hover:text-text-primary">
-                                <span class="uppercase font-label-code text-caption text-primary">[OPEN SPEC]</span>
+                                <span class="uppercase font-label-code text-caption text-primary">[DETAILS]</span>
                                 <span>[2026]</span>
                             </div>
                         </article>
 
                         <!-- ITEM 02: ISOPOD -->
-                        <article class="project-row group border-b border-hairline-border py-6 px-3 lg:px-6 transition-all duration-150 hover:bg-canvas-elevated flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
+                        <article tabindex="0" role="button" class="project-row group border-b border-hairline-border py-6 px-3 lg:px-6 transition-all duration-150 hover:bg-canvas-elevated flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
                             data-id="02"
                             data-title="Isopod"
-                            data-domain="Hybrid Cloud Automation Engine"
-                            data-desc="Developing a Minecraft server management application using Docker for containerization and a Python backend for server control. Features include automated server startup/shutdown, resource monitoring telemetry, and a high-performance REST API for interaction."
-                            data-stack="Docker,Python,REST APIs,Linux,Systemd"
+                            data-domain="Self-Hosted Server Dashboard"
+                            data-desc="A self-hosted dashboard for running Minecraft servers in Docker. A Python backend controls the servers and a React front end manages instances, mods, modpacks, and backups."
+                            data-stack="Python,TypeScript,React,Docker Compose,REST APIs"
                             data-year="2024"
                             data-cat="cloud"
-                            data-img="assets/isopod.png"
+                            data-img="assets/web/isopod.webp"
                             data-github="https://github.com/Isopod-Project/Isopod"
                             data-live="https://isopod-project.github.io/Isopod-Website/#tech"
                             data-live-text="Live Site"
-                            data-sec="CONTAINER ISOLATION"
-                            data-rel="AUTO RESTART WATCHDOG"
-                            data-pipe="DOCKER COMPOSE"
-                            data-lic="OPEN SOURCE">
+                            data-highlights="Runs Java and Bedrock servers in Docker containers|Modrinth and CurseForge installs with automatic dependency resolution|Scheduled world backups and pre-update snapshots|Crash watchdog with automatic restarts and crash reports">
                             <div class="flex items-baseline gap-6 md:w-5/12">
                                 <span class="font-index-numeral text-index-numeral text-text-muted group-hover:text-primary transition-colors">02</span>
                                 <div class="flex flex-col">
@@ -541,38 +440,35 @@
                                         Isopod
                                         <span class="font-index-numeral text-index-numeral opacity-0 group-hover:opacity-100 text-primary transition-opacity project-arrow">[↗]</span>
                                     </h4>
-                                    <span class="font-body-md text-caption text-text-secondary mt-0.5">Minecraft Server Management &amp; Cloud Control</span>
+                                    <span class="font-body-md text-caption text-text-secondary mt-0.5">Docker-Based Minecraft Server Manager</span>
                                 </div>
                             </div>
                             <div class="md:w-5/12 flex flex-wrap items-center gap-2">
-                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Docker</span>
                                 <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Python</span>
-                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">REST APIs</span>
-                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Linux</span>
+                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">TypeScript</span>
+                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">React</span>
+                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Docker Compose</span>
                             </div>
                             <div class="md:w-2/12 flex items-center justify-between md:justify-end gap-4 font-index-numeral text-index-numeral text-text-muted group-hover:text-text-primary">
-                                <span class="uppercase font-label-code text-caption text-primary">[OPEN SPEC]</span>
+                                <span class="uppercase font-label-code text-caption text-primary">[DETAILS]</span>
                                 <span>[2024]</span>
                             </div>
                         </article>
 
                         <!-- ITEM 03: XACT TRAINING -->
-                        <article class="project-row group border-b border-hairline-border py-6 px-3 lg:px-6 transition-all duration-150 hover:bg-canvas-elevated flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
+                        <article tabindex="0" role="button" class="project-row group border-b border-hairline-border py-6 px-3 lg:px-6 transition-all duration-150 hover:bg-canvas-elevated flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
                             data-id="03"
                             data-title="Xact Training"
-                            data-domain="Mobile HealthTech Application"
-                            data-desc="Developing a fitness tracking iOS application using SwiftUI, Core Data, and Firebase. Features include user authentication, offline-first biometric and workout logging, and progress visualization. Currently in active beta testing."
-                            data-stack="SwiftUI,Firebase,Core Data,Combine,iOS"
+                            data-domain="iOS Fitness App"
+                            data-desc="A fitness tracking iOS app built with SwiftUI, Core Data, and Firebase, with user authentication, workout logging, and progress visualization. Currently in testing with a small user base."
+                            data-stack="SwiftUI,Core Data,Firebase,iOS"
                             data-year="2024"
                             data-cat="interactive"
-                            data-img="assets/xact-training.png"
+                            data-img="assets/web/xact-training.webp"
                             data-iframe="https://www.youtube.com/embed/TONyGMsGS8w"
                             data-live="https://youtube.com/shorts/TONyGMsGS8w"
                             data-live-text="Watch Demo"
-                            data-sec="FIREBASE AUTH / ENCRYPTED"
-                            data-rel="OFFLINE-FIRST CORE DATA"
-                            data-pipe="TESTFLIGHT CI"
-                            data-lic="PROPRIETARY BETA">
+                            data-highlights="User accounts with Firebase Authentication|Workout logging stored with Core Data|Progress visualization|In testing with a small user base">
                             <div class="flex items-baseline gap-6 md:w-5/12">
                                 <span class="font-index-numeral text-index-numeral text-text-muted group-hover:text-primary transition-colors">03</span>
                                 <div class="flex flex-col">
@@ -580,38 +476,35 @@
                                         Xact Training
                                         <span class="font-index-numeral text-index-numeral opacity-0 group-hover:opacity-100 text-primary transition-opacity project-arrow">[↗]</span>
                                     </h4>
-                                    <span class="font-body-md text-caption text-text-secondary mt-0.5">Mobile Application / HealthTech &amp; Fitness</span>
+                                    <span class="font-body-md text-caption text-text-secondary mt-0.5">iOS Fitness Tracking App</span>
                                 </div>
                             </div>
                             <div class="md:w-5/12 flex flex-wrap items-center gap-2">
                                 <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">SwiftUI</span>
-                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Firebase</span>
                                 <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Core Data</span>
-                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Combine</span>
+                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Firebase</span>
+                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">iOS</span>
                             </div>
                             <div class="md:w-2/12 flex items-center justify-between md:justify-end gap-4 font-index-numeral text-index-numeral text-text-muted group-hover:text-text-primary">
-                                <span class="uppercase font-label-code text-caption text-primary">[OPEN SPEC]</span>
+                                <span class="uppercase font-label-code text-caption text-primary">[DETAILS]</span>
                                 <span>[2024]</span>
                             </div>
                         </article>
 
                         <!-- ITEM 04: SUPERMAN GAME -->
-                        <article class="project-row group border-b border-hairline-border py-6 px-3 lg:px-6 transition-all duration-150 hover:bg-canvas-elevated flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
+                        <article tabindex="0" role="button" class="project-row group border-b border-hairline-border py-6 px-3 lg:px-6 transition-all duration-150 hover:bg-canvas-elevated flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
                             data-id="04"
                             data-title="Superman Game"
-                            data-domain="Interactive Simulation Engine"
-                            data-desc="Developing a Superman-themed video game using Unreal Engine, implementing physics-driven animation locomotion, supersonic flight mechanics, and custom particle visual effects with vector mathematics."
-                            data-stack="Unreal Engine,C++,Vector Math,Shaders"
+                            data-domain="Unreal Engine Game"
+                            data-desc="A Superman-themed video game built in Unreal Engine, with animation-driven locomotion and special effects built on vector math."
+                            data-stack="Unreal Engine,Vector Math,Animation"
                             data-year="2023"
                             data-cat="interactive"
-                            data-img="assets/superman.png"
+                            data-img="assets/web/superman.webp"
                             data-iframe="https://www.youtube.com/embed/sT5gcVLFyUU"
                             data-live="https://youtu.be/sT5gcVLFyUU"
                             data-live-text="Gameplay Video"
-                            data-sec="LOCAL RUNTIME SANDBOX"
-                            data-rel="60+ FPS REALTIME KINEMATICS"
-                            data-pipe="UNREAL ENGINE C++ BUILD"
-                            data-lic="EDUCATIONAL / DEMO">
+                            data-highlights="Animation-driven locomotion|Flight and special effects built with vector math|Gameplay demo video available">
                             <div class="flex items-baseline gap-6 md:w-5/12">
                                 <span class="font-index-numeral text-index-numeral text-text-muted group-hover:text-primary transition-colors">04</span>
                                 <div class="flex flex-col">
@@ -619,38 +512,34 @@
                                         Superman Game
                                         <span class="font-index-numeral text-index-numeral opacity-0 group-hover:opacity-100 text-primary transition-opacity project-arrow">[↗]</span>
                                     </h4>
-                                    <span class="font-body-md text-caption text-text-secondary mt-0.5">Interactive Kinematics &amp; Aerodynamic Flight</span>
+                                    <span class="font-body-md text-caption text-text-secondary mt-0.5">Superhero Flight Game in Unreal Engine</span>
                                 </div>
                             </div>
                             <div class="md:w-5/12 flex flex-wrap items-center gap-2">
                                 <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Unreal Engine</span>
-                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">C++</span>
                                 <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Vector Math</span>
-                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Shaders</span>
+                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Animation</span>
                             </div>
                             <div class="md:w-2/12 flex items-center justify-between md:justify-end gap-4 font-index-numeral text-index-numeral text-text-muted group-hover:text-text-primary">
-                                <span class="uppercase font-label-code text-caption text-primary">[OPEN SPEC]</span>
+                                <span class="uppercase font-label-code text-caption text-primary">[DETAILS]</span>
                                 <span>[2023]</span>
                             </div>
                         </article>
 
                         <!-- ITEM 05: NOXCUSES WEB -->
-                        <article class="project-row group border-b border-hairline-border py-6 px-3 lg:px-6 transition-all duration-150 hover:bg-canvas-elevated flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
+                        <article tabindex="0" role="button" class="project-row group border-b border-hairline-border py-6 px-3 lg:px-6 transition-all duration-150 hover:bg-canvas-elevated flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
                             data-id="05"
                             data-title="NoXcuses Web"
-                            data-domain="Personal Cloud Platform"
-                            data-desc="Developing a full-stack workout tracking web application using HTML, CSS, and JavaScript, hosted on a personal bare-metal Linux server with automated backup routines."
-                            data-stack="JavaScript,Node.js,Express,Personal Server,Linux"
+                            data-domain="Workout Tracking Web App"
+                            data-desc="A workout tracking web app written in plain HTML, CSS, and JavaScript, installable as a progressive web app and hosted on my own server."
+                            data-stack="JavaScript,HTML,CSS,PWA"
                             data-year="2024"
                             data-cat="web"
                             data-img="assets/noxcuses.png"
                             data-github="https://github.com/tacoz234/NoXcuses-WebApp"
                             data-live="https://noxcuses.me"
                             data-live-text="Visit WebApp"
-                            data-sec="REVERSE PROXY / SSL"
-                            data-rel="SELF-HOSTED DAEMON"
-                            data-pipe="GIT DEPLOYMENT HOOKS"
-                            data-lic="PERSONAL PLATFORM">
+                            data-highlights="Installable PWA with a service worker|Workout templates, exercise library, and history|Social page and achievement badges|Self-hosted on a personal server">
                             <div class="flex items-baseline gap-6 md:w-5/12">
                                 <span class="font-index-numeral text-index-numeral text-text-muted group-hover:text-primary transition-colors">05</span>
                                 <div class="flex flex-col">
@@ -658,37 +547,34 @@
                                         NoXcuses Web
                                         <span class="font-index-numeral text-index-numeral opacity-0 group-hover:opacity-100 text-primary transition-opacity project-arrow">[↗]</span>
                                     </h4>
-                                    <span class="font-body-md text-caption text-text-secondary mt-0.5">Full-Stack / Bare-Metal Personal Server</span>
+                                    <span class="font-body-md text-caption text-text-secondary mt-0.5">Installable Workout Tracker on a Personal Server</span>
                                 </div>
                             </div>
                             <div class="md:w-5/12 flex flex-wrap items-center gap-2">
                                 <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">JavaScript</span>
-                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Node.js</span>
-                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Express</span>
-                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Personal Server</span>
+                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">HTML</span>
+                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">CSS</span>
+                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">PWA</span>
                             </div>
                             <div class="md:w-2/12 flex items-center justify-between md:justify-end gap-4 font-index-numeral text-index-numeral text-text-muted group-hover:text-text-primary">
-                                <span class="uppercase font-label-code text-caption text-primary">[OPEN SPEC]</span>
+                                <span class="uppercase font-label-code text-caption text-primary">[DETAILS]</span>
                                 <span>[2024]</span>
                             </div>
                         </article>
 
                         <!-- ITEM 06: BRAVE ICON CHANGER -->
-                        <article class="project-row group border-b border-hairline-border py-6 px-3 lg:px-6 transition-all duration-150 hover:bg-canvas-elevated flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
+                        <article tabindex="0" role="button" class="project-row group border-b border-hairline-border py-6 px-3 lg:px-6 transition-all duration-150 hover:bg-canvas-elevated flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
                             data-id="06"
                             data-title="Brave Icon Changer"
-                            data-domain="OS Automation Utility"
-                            data-desc="Developing a desktop application to change the icon of the Brave browser on Windows and macOS. Features include selecting a custom icon, automatically updating the Brave shortcut, and preserving all browser settings and bookmarks."
-                            data-stack="Python,Tkinter,Batch,OS Automation"
+                            data-domain="Desktop Utility"
+                            data-desc="A cross-platform desktop tool that sets custom profile pictures in the Brave browser without a Google account, while preserving existing browser settings and bookmarks."
+                            data-stack="Python,Tkinter,Pillow,PyInstaller"
                             data-year="2023"
                             data-cat="systems"
-                            data-img="assets/brave_icon_changer.png"
+                            data-img="assets/web/brave_icon_changer.webp"
                             data-github="https://github.com/tacoz234/Custom-Brave-Icons"
                             data-live=""
-                            data-sec="LOCAL PERMISSIONS ONLY"
-                            data-rel="ATOMIC SHORTCUT RESTORE"
-                            data-pipe="CROSS-PLATFORM SCRIPT"
-                            data-lic="MIT OPEN SOURCE">
+                            data-highlights="Finds every Brave profile automatically|Works on macOS and Windows|Tkinter GUI, packaged as a standalone app with PyInstaller">
                             <div class="flex items-baseline gap-6 md:w-5/12">
                                 <span class="font-index-numeral text-index-numeral text-text-muted group-hover:text-primary transition-colors">06</span>
                                 <div class="flex flex-col">
@@ -696,38 +582,35 @@
                                         Brave Icon Changer
                                         <span class="font-index-numeral text-index-numeral opacity-0 group-hover:opacity-100 text-primary transition-opacity project-arrow">[↗]</span>
                                     </h4>
-                                    <span class="font-body-md text-caption text-text-secondary mt-0.5">Desktop OS Automation &amp; Dynamic Patching</span>
+                                    <span class="font-body-md text-caption text-text-secondary mt-0.5">Custom Profile Icons for Brave (macOS &amp; Windows)</span>
                                 </div>
                             </div>
                             <div class="md:w-5/12 flex flex-wrap items-center gap-2">
                                 <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Python</span>
                                 <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Tkinter</span>
-                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Batch</span>
-                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">OS Hooks</span>
+                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Pillow</span>
+                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">PyInstaller</span>
                             </div>
                             <div class="md:w-2/12 flex items-center justify-between md:justify-end gap-4 font-index-numeral text-index-numeral text-text-muted group-hover:text-text-primary">
-                                <span class="uppercase font-label-code text-caption text-primary">[OPEN SPEC]</span>
+                                <span class="uppercase font-label-code text-caption text-primary">[DETAILS]</span>
                                 <span>[2023]</span>
                             </div>
                         </article>
 
                         <!-- ITEM 07: TECH HELP PORTAL -->
-                        <article class="project-row group border-b border-hairline-border py-6 px-3 lg:px-6 transition-all duration-150 hover:bg-canvas-elevated flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
+                        <article tabindex="0" role="button" class="project-row group border-b border-hairline-border py-6 px-3 lg:px-6 transition-all duration-150 hover:bg-canvas-elevated flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
                             data-id="07"
                             data-title="Tech Help Portal"
-                            data-domain="Client Service Architecture"
-                            data-desc="Developed a website for my tech support company, Determan Tech Help, serving 100+ clients with automated appointment booking, customer onboarding, and Cloudflare edge network caching across Northern Virginia."
-                            data-stack="Node.js,Cloudflare,HTML5,CSS3,Edge Network"
+                            data-domain="Business Website"
+                            data-desc="The website for my tech support business, Determan Tech Help, which has served 100+ clients. It handles appointment booking, services, and customer reviews."
+                            data-stack="Node.js,Express,MongoDB,Cloudflare,Caddy"
                             data-year="2023"
                             data-cat="cloud"
-                            data-img="assets/determantechhelp.png"
+                            data-img="assets/web/determantechhelp.webp"
                             data-github="https://github.com/tacoz234/DetermanTechHelp"
                             data-live="https://determantechhelp.com"
                             data-live-text="Visit Portal"
-                            data-sec="CLOUDFLARE SSL / DDOS SHIELD"
-                            data-rel="EDGE CACHED 99.9% SLI"
-                            data-pipe="CONTINUOUS EDGE SYNC"
-                            data-lic="COMMERCIAL PLATFORM">
+                            data-highlights="Appointment booking and customer reviews|Express backend with MongoDB, Helmet, and rate limiting|Self-hosted behind Caddy and Cloudflare">
                             <div class="flex items-baseline gap-6 md:w-5/12">
                                 <span class="font-index-numeral text-index-numeral text-text-muted group-hover:text-primary transition-colors">07</span>
                                 <div class="flex flex-col">
@@ -735,37 +618,35 @@
                                         Tech Help Portal
                                         <span class="font-index-numeral text-index-numeral opacity-0 group-hover:opacity-100 text-primary transition-opacity project-arrow">[↗]</span>
                                     </h4>
-                                    <span class="font-body-md text-caption text-text-secondary mt-0.5">Commercial Platform &amp; Edge Network Caching</span>
+                                    <span class="font-body-md text-caption text-text-secondary mt-0.5">Booking &amp; Reviews Site for My Tech Support Business</span>
                                 </div>
                             </div>
                             <div class="md:w-5/12 flex flex-wrap items-center gap-2">
                                 <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Node.js</span>
+                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Express</span>
+                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">MongoDB</span>
                                 <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Cloudflare</span>
-                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Edge Ops</span>
                             </div>
                             <div class="md:w-2/12 flex items-center justify-between md:justify-end gap-4 font-index-numeral text-index-numeral text-text-muted group-hover:text-text-primary">
-                                <span class="uppercase font-label-code text-caption text-primary">[OPEN SPEC]</span>
+                                <span class="uppercase font-label-code text-caption text-primary">[DETAILS]</span>
                                 <span>[2023]</span>
                             </div>
                         </article>
 
                         <!-- ITEM 08: TERMINAL SPREADSHEET -->
-                        <article class="project-row group border-b border-hairline-border py-6 px-3 lg:px-6 transition-all duration-150 hover:bg-canvas-elevated flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
+                        <article tabindex="0" role="button" class="project-row group border-b border-hairline-border py-6 px-3 lg:px-6 transition-all duration-150 hover:bg-canvas-elevated flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
                             data-id="08"
                             data-title="Terminal Spreadsheet"
-                            data-domain="CLI Systems Tool / Lexer Parser"
-                            data-desc="Designed and implemented a terminal-based spreadsheet application in Ruby featuring formula evaluation syntax trees, cell dependency graph resolution, and keyboard-driven Curses terminal rendering."
-                            data-stack="Ruby,CLI,Curses,AST Parser,Data Structures"
+                            data-domain="Command-Line App"
+                            data-desc="A terminal-based spreadsheet application designed and implemented in Ruby."
+                            data-stack="Ruby,CLI"
                             data-year="2023"
                             data-cat="systems"
                             data-img="assets/terminal-spreadsheet-demo.png"
                             data-iframe="https://www.youtube.com/embed/OAGlMciHDsc"
                             data-live="https://youtu.be/OAGlMciHDsc"
                             data-live-text="Watch Demo"
-                            data-sec="MEMORY ISOLATED CLI"
-                            data-rel="ZERO EXTERNAL RUNTIME DEPS"
-                            data-pipe="RUBY CORE INTERPRETER"
-                            data-lic="OPEN SOURCE">
+                            data-highlights="Runs entirely in the terminal|Demo video available">
                             <div class="flex items-baseline gap-6 md:w-5/12">
                                 <span class="font-index-numeral text-index-numeral text-text-muted group-hover:text-primary transition-colors">08</span>
                                 <div class="flex flex-col">
@@ -773,17 +654,15 @@
                                         Terminal Spreadsheet
                                         <span class="font-index-numeral text-index-numeral opacity-0 group-hover:opacity-100 text-primary transition-opacity project-arrow">[↗]</span>
                                     </h4>
-                                    <span class="font-body-md text-caption text-text-secondary mt-0.5">CLI Systems Tool &amp; Formula AST Parser</span>
+                                    <span class="font-body-md text-caption text-text-secondary mt-0.5">Terminal-Based Spreadsheet in Ruby</span>
                                 </div>
                             </div>
                             <div class="md:w-5/12 flex flex-wrap items-center gap-2">
                                 <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Ruby</span>
                                 <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">CLI</span>
-                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">Curses</span>
-                                <span class="font-label-code text-caption px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary group-hover:border-text-primary group-hover:text-text-primary transition-colors">AST Parser</span>
                             </div>
                             <div class="md:w-2/12 flex items-center justify-between md:justify-end gap-4 font-index-numeral text-index-numeral text-text-muted group-hover:text-text-primary">
-                                <span class="uppercase font-label-code text-caption text-primary">[OPEN SPEC]</span>
+                                <span class="uppercase font-label-code text-caption text-primary">[DETAILS]</span>
                                 <span>[2023]</span>
                             </div>
                         </article>
@@ -795,11 +674,10 @@
                 <section id="skills" class="py-12 border-b border-hairline-border flex flex-col gap-10">
                     <div class="flex flex-col gap-2">
                         <div class="flex items-center gap-2">
-                            <span class="font-index-numeral text-index-numeral text-text-muted">[STACK: 003_DISCIPLINES]</span>
-                            <span class="font-label-code text-caption text-text-secondary uppercase">CORE SYSTEMS &amp; SPECIALIZED PROTOCOLS</span>
+                            <span class="font-index-numeral text-index-numeral text-text-muted">03</span>
                         </div>
                         <h3 class="font-headline-lg text-headline-lg font-bold uppercase tracking-tight text-text-primary">
-                            Engineering Disciplines &amp; Toolchain
+                            Skills
                         </h3>
                     </div>
 
@@ -811,7 +689,7 @@
                                 01 / LANGUAGES
                             </span>
                             <div class="flex flex-col gap-2 font-label-code text-caption">
-                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Python</span><span class="text-text-muted">CS452 / R&amp;D</span></div>
+                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Python</span><span class="text-text-muted">CS452 / Noblis / Isopod</span></div>
                                 <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Java</span><span class="text-text-muted">CS240 / CS345</span></div>
                                 <div class="flex items-center justify-between"><span class="text-text-primary font-medium">JavaScript</span><span class="text-text-muted">Node.js / React</span></div>
                                 <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Rust</span><span class="text-text-muted">CS430 Systems</span></div>
@@ -828,40 +706,41 @@
                                 02 / CLOUD &amp; DEVOPS
                             </span>
                             <div class="flex flex-col gap-2 font-label-code text-caption">
-                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">AWS [GovCloud]</span><span class="text-text-muted">KBR</span></div>
-                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Terraform</span><span class="text-text-muted">IaC Modernization</span></div>
-                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Docker / Podman</span><span class="text-text-muted">Noblis / Isopod</span></div>
-                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Kubernetes</span><span class="text-text-muted">Clusters</span></div>
-                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">CI/CD Pipelines</span><span class="text-text-muted">GitLab / Actions</span></div>
-                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Linux (RHEL/Ubuntu)</span><span class="text-text-muted">Server Ops</span></div>
+                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">AWS</span><span class="text-text-muted">KBR</span></div>
+                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Terraform</span><span class="text-text-muted">KBR</span></div>
+                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Docker</span><span class="text-text-muted">KBR / Noblis / Isopod</span></div>
+                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Kubernetes</span><span class="text-text-muted">KBR</span></div>
+                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">CI/CD</span><span class="text-text-muted">GitLab / GitHub Actions</span></div>
+                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Linux</span><span class="text-text-muted">Self-Hosted Servers</span></div>
                             </div>
                         </div>
 
                         <!-- Col 3 -->
                         <div class="p-5 bg-surface-container-lowest border border-hairline-border flex flex-col gap-4">
                             <span class="font-label-code text-caption text-text-muted uppercase font-bold border-b border-hairline-border pb-2">
-                                03 / DATA &amp; STREAMING
+                                03 / DATA &amp; BACKEND
                             </span>
                             <div class="flex flex-col gap-2 font-label-code text-caption">
-                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Apache Kafka</span><span class="text-text-muted">Noblis Streams</span></div>
-                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Redis</span><span class="text-text-muted">In-Memory Cache</span></div>
-                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">SQL &amp; PostgreSQL</span><span class="text-text-muted">CS374 Schema</span></div>
-                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">NumPy &amp; Pandas</span><span class="text-text-muted">DATA200 ML</span></div>
-                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">RESTful APIs</span><span class="text-text-muted">Microservices</span></div>
+                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Apache Kafka</span><span class="text-text-muted">Noblis</span></div>
+                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Redis</span><span class="text-text-muted">Noblis</span></div>
+                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">SQL</span><span class="text-text-muted">CS374</span></div>
+                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">NumPy</span><span class="text-text-muted">DATA200</span></div>
+                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">MongoDB</span><span class="text-text-muted">Tech Help Site</span></div>
+                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">REST APIs</span><span class="text-text-muted">Noblis / Isopod</span></div>
                             </div>
                         </div>
 
                         <!-- Col 4 -->
                         <div class="p-5 bg-surface-container-lowest border border-hairline-border flex flex-col gap-4">
                             <span class="font-label-code text-caption text-text-muted uppercase font-bold border-b border-hairline-border pb-2">
-                                04 / ENTERPRISE &amp; SYSTEMS
+                                04 / ENTERPRISE TOOLS
                             </span>
                             <div class="flex flex-col gap-2 font-label-code text-caption">
                                 <div class="flex items-center justify-between"><span class="text-text-primary font-medium">ServiceNow</span><span class="text-text-muted">ManTech IT</span></div>
-                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Okta Admin</span><span class="text-text-muted">Identity Access</span></div>
-                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Cloudflare</span><span class="text-text-muted">Edge Caching</span></div>
-                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">MBSE Systems</span><span class="text-text-muted">KBR Architecture</span></div>
-                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">NotebookLM / RAG</span><span class="text-text-muted">GenAI Base</span></div>
+                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Okta</span><span class="text-text-muted">ManTech</span></div>
+                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">Cloudflare</span><span class="text-text-muted">Tech Help Site</span></div>
+                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">MBSE</span><span class="text-text-muted">KBR Training</span></div>
+                                <div class="flex items-center justify-between"><span class="text-text-primary font-medium">NotebookLM</span><span class="text-text-muted">ManTech</span></div>
                             </div>
                         </div>
 
@@ -872,11 +751,10 @@
                 <section id="education" class="py-12 border-b border-hairline-border flex flex-col gap-10">
                     <div class="flex flex-col gap-2">
                         <div class="flex items-center gap-2">
-                            <span class="font-index-numeral text-index-numeral text-text-muted">[DOSSIER: 004_ACADEMIC]</span>
-                            <span class="font-label-code text-caption text-text-secondary uppercase">INSTITUTIONAL DEGREES &amp; RESEARCH</span>
+                            <span class="font-index-numeral text-index-numeral text-text-muted">04</span>
                         </div>
                         <h3 class="font-headline-lg text-headline-lg font-bold uppercase tracking-tight text-text-primary">
-                            Academic Credentials
+                            Education
                         </h3>
                     </div>
 
@@ -894,11 +772,11 @@
                                 </h4>
                                 <span class="font-label-code text-caption text-primary font-semibold">VIRGINIA TECH</span>
                                 <p class="font-body-md text-caption text-text-secondary leading-normal">
-                                    Specializing in Artificial Intelligence and Machine Learning software engineering methodologies.
+                                    Computer Science &amp; Applications, with a focus in Artificial Intelligence.
                                 </p>
                             </div>
                             <div class="pt-4 border-t border-hairline-border flex flex-col gap-2">
-                                <span class="font-label-code text-[11px] text-text-muted uppercase">Core Focus Areas:</span>
+                                <span class="font-label-code text-[11px] text-text-muted uppercase">Coursework:</span>
                                 <div class="flex flex-wrap gap-1.5 font-label-code text-[11px]">
                                     <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-primary">Intro to Artificial Intelligence</span>
                                     <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-primary">Intro to Machine Learning</span>
@@ -924,11 +802,11 @@
                                     <span class="font-label-code text-caption text-terminal-green font-semibold">GPA: 3.55 (Cum Laude)</span>
                                 </div>
                                 <p class="font-body-md text-caption text-text-secondary leading-normal">
-                                    Rigorous grounding in data structures, systems architecture, computer networks, algorithms, and database management.
+                                    Minor in Data Analytics. Dean's List in five semesters.
                                 </p>
                             </div>
                             <div class="pt-4 border-t border-hairline-border flex flex-col gap-2">
-                                <span class="font-label-code text-[11px] text-text-muted uppercase">Foundational Coursework:</span>
+                                <span class="font-label-code text-[11px] text-text-muted uppercase">Coursework:</span>
                                 <div class="flex flex-wrap gap-1.5 font-label-code text-[11px]">
                                     <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">Algorithms &amp; Data Structures (CS240/345)</span>
                                     <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">Computer Systems (CS261/361)</span>
@@ -949,23 +827,23 @@
                         <div class="flex flex-col gap-3 max-w-xl">
                             <div class="flex items-center gap-2">
                                 <span class="w-2.5 h-2.5 rounded-full bg-terminal-green"></span>
-                                <span class="font-label-code text-caption text-text-secondary uppercase font-semibold">DISPATCH: 005_TRANSMISSION // READY FOR INQUIRIES</span>
+                                <span class="font-label-code text-caption text-text-secondary uppercase font-semibold">05 / CONTACT</span>
                             </div>
                             <h3 class="font-headline-md text-headline-md font-bold tracking-tight text-text-primary">
-                                Initiate direct transmission for cloud engineering or contract systems work.
+                                Get in touch
                             </h3>
                             <p class="font-body-md text-caption text-text-secondary">
-                                Available for consultations, systems architecture projects, and high-stakes infrastructure initiatives in the Washington DC / Northern Virginia area or remotely.
+                                Email is the fastest way to reach me, whether it's about cloud and DevOps work or a question about one of these projects. I'm based in Northern Virginia.
                             </p>
                         </div>
                         <div class="flex flex-wrap items-center gap-3">
                             <a class="font-label-code text-label-code uppercase tracking-wider px-6 py-3.5 bg-text-primary text-canvas-base hover:bg-electric-accent transition-colors inline-flex items-center gap-2" href="mailto:coledeterman@gmail.com">
-                                <span>TRANSMIT [EMAIL]</span>
-                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                                <span>EMAIL ME</span>
+                                <span aria-hidden="true">→</span>
                             </a>
                             <a class="font-label-code text-label-code uppercase tracking-wider px-6 py-3.5 bg-canvas-elevated text-text-primary border border-text-primary hover:bg-text-primary hover:text-canvas-base transition-colors inline-flex items-center gap-2" href="assets/ColeDetermanResume.pdf" target="_blank">
                                 <span>RESUME [PDF]</span>
-                                <span class="material-symbols-outlined text-[16px]">download</span>
+                                <span aria-hidden="true">↓</span>
                             </a>
                             <a class="font-label-code text-label-code uppercase tracking-wider px-4 py-3.5 bg-canvas-elevated text-text-primary border border-hairline-border hover:border-text-primary transition-colors" href="https://linkedin.com/in/coledeterman" target="_blank" rel="noreferrer">
                                 LINKEDIN ↗
@@ -978,15 +856,15 @@
                 </section>
 
                 <!-- DETAIL DRAWER (Tier 3 Sliding Modal for Deep Project Inspector) -->
-                <aside class="fixed top-0 right-0 h-screen w-full md:w-[600px] bg-canvas-elevated border-l border-text-primary z-50 transform translate-x-full transition-transform duration-200 ease-in-out flex flex-col justify-between overflow-y-auto shadow-2xl" id="project-drawer">
+                <aside inert role="dialog" aria-modal="true" aria-labelledby="drawer-title" class="fixed top-0 right-0 h-screen w-full md:w-[600px] bg-canvas-elevated border-l border-text-primary z-50 transform translate-x-full transition-transform duration-200 ease-in-out flex flex-col justify-between overflow-y-auto shadow-2xl" id="project-drawer">
                     <div>
                         <!-- Drawer Header -->
                         <div class="p-6 border-b border-hairline-border flex items-center justify-between sticky top-0 bg-canvas-elevated z-10">
                             <div class="flex items-center gap-2 font-label-code text-caption">
                                 <span class="font-index-numeral text-index-numeral text-primary font-bold" id="drawer-id-num">01</span>
-                                <span class="text-text-muted">// SPECIFICATION DOSSIER</span>
+                                <span class="text-text-muted">// PROJECT</span>
                             </div>
-                            <button class="font-label-code text-caption uppercase px-3 py-1 bg-surface-container hover:bg-text-primary hover:text-canvas-base transition-colors" id="close-drawer">
+                            <button class="font-label-code text-caption uppercase px-3 py-1 bg-surface-container hover:bg-text-primary hover:text-canvas-base transition-colors" id="close-drawer" aria-label="Close project details">
                                 [ESC / CLOSE ×]
                             </button>
                         </div>
@@ -994,50 +872,35 @@
                         <!-- Drawer Content -->
                         <div class="p-6 lg:p-8 flex flex-col gap-6">
                             <div class="flex flex-col gap-2">
-                                <span class="font-label-code text-caption text-text-muted uppercase tracking-wider" id="drawer-cat">HYBRID CLOUD AUTOMATION</span>
+                                <span class="font-label-code text-caption text-text-muted uppercase tracking-wider" id="drawer-cat"></span>
                                 <h3 class="font-headline-lg text-headline-lg font-bold tracking-tight text-text-primary" id="drawer-title">Isopod</h3>
-                                <span class="font-index-numeral text-index-numeral text-primary" id="drawer-year">RELEASE CYCLE // 2024</span>
+                                <span class="font-index-numeral text-index-numeral text-primary" id="drawer-year"></span>
                             </div>
 
                             <!-- Media Container (Image or Video) -->
                             <div class="relative h-64 w-full bg-surface-container-highest border border-hairline-border overflow-hidden" id="drawer-media-container">
-                                <img class="w-full h-full object-cover" id="drawer-img" src="assets/isopod.png" alt="Project Specification View"/>
+                                
                             </div>
 
                             <div class="flex flex-col gap-2">
-                                <span class="font-label-code text-caption text-text-muted uppercase">SYSTEM SUMMARY</span>
+                                <span class="font-label-code text-caption text-text-muted uppercase">OVERVIEW</span>
                                 <p class="font-body-lg text-body-lg text-text-secondary leading-relaxed" id="drawer-desc">
                                     Project summary description.
                                 </p>
                             </div>
 
                             <div class="flex flex-col gap-3 py-4 border-y border-hairline-border">
-                                <span class="font-label-code text-caption text-text-muted uppercase">DEPLOYED STACK &amp; PROTOCOLS</span>
+                                <span class="font-label-code text-caption text-text-muted uppercase">STACK</span>
                                 <div class="flex flex-wrap gap-2" id="drawer-tags">
                                     <!-- Dynamic stack badges -->
                                 </div>
                             </div>
 
                             <div class="flex flex-col gap-3">
-                                <span class="font-label-code text-caption text-text-muted uppercase">ARCHITECTURAL ATTRIBUTES</span>
-                                <div class="grid grid-cols-2 gap-3 font-label-code text-caption">
-                                    <div class="p-3 bg-surface-container-low border border-hairline-border">
-                                        <span class="text-text-muted block">SECURITY</span>
-                                        <span class="font-semibold text-text-primary" id="drawer-sec">CONTAINER ISOLATION</span>
-                                    </div>
-                                    <div class="p-3 bg-surface-container-low border border-hairline-border">
-                                        <span class="text-text-muted block">RELIABILITY</span>
-                                        <span class="font-semibold text-text-primary" id="drawer-rel">WATCHDOG AUTO-RECOVERY</span>
-                                    </div>
-                                    <div class="p-3 bg-surface-container-low border border-hairline-border">
-                                        <span class="text-text-muted block">PIPELINE</span>
-                                        <span class="font-semibold text-text-primary" id="drawer-pipe">DOCKER COMPOSE / CI</span>
-                                    </div>
-                                    <div class="p-3 bg-surface-container-low border border-hairline-border">
-                                        <span class="text-text-muted block">LICENSE</span>
-                                        <span class="font-semibold text-text-primary" id="drawer-lic">MIT OPEN SOURCE</span>
-                                    </div>
-                                </div>
+                                <span class="font-label-code text-caption text-text-muted uppercase">HIGHLIGHTS</span>
+                                <ul class="flex flex-col gap-2 font-body-md text-body-md text-text-secondary" id="drawer-highlights">
+                                    <!-- Injected dynamically via JS -->
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -1054,7 +917,6 @@
                                 <span class="font-index-numeral text-index-numeral">↗</span>
                             </a>
                         </div>
-                        <span class="font-label-code text-caption text-text-muted">AUTH // DETERMAN.SYS</span>
                     </div>
                 </aside>
 
@@ -1067,11 +929,9 @@
         <!-- FOOTER -->
         <footer class="w-full border-t border-hairline-border bg-surface-container-low px-6 lg:px-12 py-6">
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4 font-label-code text-caption text-text-secondary">
-                <div>DESIGNED WITH SWISS EDITORIAL PRECISION &amp; CLOUD ARCHITECTURAL RIGOR</div>
+                <div>© 2026 COLE DETERMAN</div>
                 <div class="flex items-center gap-4">
-                    <span>KBR INC.</span>
-                    <span>·</span>
-                    <span>VIRGINIA, USA</span>
+                    <span>FALLS CHURCH, VA</span>
                     <span>·</span>
                     <a class="text-primary hover:underline" href="assets/ColeDetermanResume.pdf" target="_blank">RESUME [PDF]</a>
                 </div>
@@ -1080,7 +940,7 @@
 
     </div>
 
-    <!-- Client-Side Orchestration Script -->
+    <!-- Interaction script -->
     <script src="script.js"></script>
 </body>
 </html>

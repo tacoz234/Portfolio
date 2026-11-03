@@ -3,11 +3,6 @@
 // ==========================================================================
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Initialize Lucide Icons
-    if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-    }
-
     // ==========================================================================
     // 1. KINETIC FLOATING CURSOR PREVIEW (DESKTOP)
     // ==========================================================================
@@ -63,10 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const drawerTags = document.getElementById('drawer-tags');
     const drawerMediaContainer = document.getElementById('drawer-media-container');
 
-    const drawerSec = document.getElementById('drawer-sec');
-    const drawerRel = document.getElementById('drawer-rel');
-    const drawerPipe = document.getElementById('drawer-pipe');
-    const drawerLic = document.getElementById('drawer-lic');
+    const drawerHighlights = document.getElementById('drawer-highlights');
+    let lastFocusedRow = null;
 
     const drawerRepoBtn = document.getElementById('drawer-repo-btn');
     const drawerLiveBtn = document.getElementById('drawer-live-btn');
@@ -123,10 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const iframe = row.getAttribute('data-iframe');
             const stack = (row.getAttribute('data-stack') || '').split(',');
 
-            const sec = row.getAttribute('data-sec') || 'CONTAINER ISOLATION';
-            const rel = row.getAttribute('data-rel') || 'HIGH AVAILABILITY';
-            const pipe = row.getAttribute('data-pipe') || 'CI/CD PIPELINE';
-            const lic = row.getAttribute('data-lic') || 'OPEN SOURCE';
+            const highlights = (row.getAttribute('data-highlights') || '').split('|').filter(Boolean);
 
             const github = row.getAttribute('data-github');
             const live = row.getAttribute('data-live');
@@ -135,13 +125,24 @@ document.addEventListener("DOMContentLoaded", () => {
             if (drawerIdNum) drawerIdNum.textContent = id;
             if (drawerCat) drawerCat.textContent = domain;
             if (drawerTitle) drawerTitle.textContent = title;
-            if (drawerYear) drawerYear.textContent = `RELEASE CYCLE // ${year}`;
+            if (drawerYear) drawerYear.textContent = year;
             if (drawerDesc) drawerDesc.textContent = desc;
 
-            if (drawerSec) drawerSec.textContent = sec;
-            if (drawerRel) drawerRel.textContent = rel;
-            if (drawerPipe) drawerPipe.textContent = pipe;
-            if (drawerLic) drawerLic.textContent = lic;
+            if (drawerHighlights) {
+                drawerHighlights.innerHTML = '';
+                highlights.forEach(text => {
+                    const li = document.createElement('li');
+                    li.className = 'flex gap-3';
+                    const mark = document.createElement('span');
+                    mark.className = 'font-index-numeral text-index-numeral text-primary pt-1.5';
+                    mark.setAttribute('aria-hidden', 'true');
+                    mark.textContent = '—';
+                    const body = document.createElement('span');
+                    body.textContent = text.trim();
+                    li.append(mark, body);
+                    drawerHighlights.appendChild(li);
+                });
+            }
 
             // Render Stack badges
             if (drawerTags) {
@@ -194,19 +195,34 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             // Show drawer
-            if (drawer) drawer.classList.remove('translate-x-full');
+            if (drawer) {
+                drawer.inert = false;
+                drawer.classList.remove('translate-x-full');
+            }
             if (drawerBackdrop) drawerBackdrop.classList.remove('hidden');
             if (preview) {
                 preview.classList.add('opacity-0');
                 isPreviewVisible = false;
             }
             document.body.style.overflow = 'hidden';
+            lastFocusedRow = row;
+            if (closeDrawerBtn) closeDrawerBtn.focus();
+        });
+
+        // --- Keyboard: Enter / Space open the drawer ---
+        row.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                row.click();
+            }
         });
     });
 
     // Close Drawer Handler
     function closeDrawer() {
-        if (drawer) drawer.classList.add('translate-x-full');
+        if (!drawer || drawer.classList.contains('translate-x-full')) return;
+        drawer.classList.add('translate-x-full');
+        drawer.inert = true;
         if (drawerBackdrop) drawerBackdrop.classList.add('hidden');
         if (drawerMediaContainer) {
             // Stop any playing iframe videos
@@ -214,6 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
             iframes.forEach(f => f.src = f.src);
         }
         document.body.style.overflow = '';
+        if (lastFocusedRow) lastFocusedRow.focus();
     }
 
     if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeDrawer);
