@@ -118,23 +118,23 @@
                 </p>
             </div>
 
-            <!-- Sidebar Navigation Links -->
+            <!-- Sidebar Navigation Links (ORDER: Experience -> Work -> Skills -> Education -> Contact) -->
             <nav id="sidebar-nav" class="flex flex-col gap-1.5 py-4 border-y border-hairline-border">
-                <a class="nav-item uppercase py-1.5 px-2 transition-all flex items-center justify-between text-text-secondary hover:text-text-primary font-label-code text-label-code" href="#work" data-section="work">
-                    <span>01 / Work</span>
-                    <span class="font-index-numeral text-index-numeral text-text-muted">[PROJ]</span>
-                </a>
                 <a class="nav-item uppercase py-1.5 px-2 transition-all flex items-center justify-between text-text-secondary hover:text-text-primary font-label-code text-label-code" href="#experience" data-section="experience">
-                    <span>02 / Experience</span>
+                    <span>01 / Experience</span>
                     <span class="font-index-numeral text-index-numeral text-text-muted">[CAREER]</span>
                 </a>
-                <a class="nav-item uppercase py-1.5 px-2 transition-all flex items-center justify-between text-text-secondary hover:text-text-primary font-label-code text-label-code" href="#education" data-section="education">
-                    <span>03 / Education</span>
-                    <span class="font-index-numeral text-index-numeral text-text-muted">[ACADEMIC]</span>
+                <a class="nav-item uppercase py-1.5 px-2 transition-all flex items-center justify-between text-text-secondary hover:text-text-primary font-label-code text-label-code" href="#work" data-section="work">
+                    <span>02 / Work</span>
+                    <span class="font-index-numeral text-index-numeral text-text-muted">[PROJ]</span>
                 </a>
                 <a class="nav-item uppercase py-1.5 px-2 transition-all flex items-center justify-between text-text-secondary hover:text-text-primary font-label-code text-label-code" href="#skills" data-section="skills">
-                    <span>04 / Skills</span>
+                    <span>03 / Skills</span>
                     <span class="font-index-numeral text-index-numeral text-text-muted">[STACK]</span>
+                </a>
+                <a class="nav-item uppercase py-1.5 px-2 transition-all flex items-center justify-between text-text-secondary hover:text-text-primary font-label-code text-label-code" href="#education" data-section="education">
+                    <span>04 / Education</span>
+                    <span class="font-index-numeral text-index-numeral text-text-muted">[ACADEMIC]</span>
                 </a>
                 <a class="nav-item uppercase py-1.5 px-2 transition-all flex items-center justify-between text-text-secondary hover:text-text-primary font-label-code text-label-code" href="#contact" data-section="contact">
                     <span>05 / Contact</span>
@@ -173,8 +173,10 @@
                 <a href="#hero" class="font-headline-sm text-headline-sm uppercase font-bold tracking-tight text-text-primary">Cole Determan</a>
             </div>
             <nav class="flex items-center gap-3 font-label-code text-caption uppercase">
-                <a class="text-text-secondary hover:text-text-primary" href="#work">Work</a>
                 <a class="text-text-secondary hover:text-text-primary" href="#experience">Exp</a>
+                <a class="text-text-secondary hover:text-text-primary" href="#work">Work</a>
+                <a class="text-text-secondary hover:text-text-primary" href="#skills">Skills</a>
+                <a class="text-text-secondary hover:text-text-primary" href="#education">Edu</a>
                 <a class="text-text-secondary hover:text-text-primary" href="#contact">Contact</a>
                 <a class="px-2 py-1 bg-text-primary text-canvas-base" href="assets/ColeDetermanResume.pdf" target="_blank">PDF ↗</a>
             </nav>
@@ -321,12 +323,131 @@
                     </div>
                 </section>
 
-                <!-- SECTION 3: THE INTERACTIVE INDEX (SELECTED BUILT WORKS) -->
-                <section id="work" class="py-12 flex flex-col gap-8">
+                <!-- 1. EXPERIENCE SECTION: CAREER TELEMETRY & DEPLOYMENTS -->
+                <section id="experience" class="py-12 border-b border-hairline-border flex flex-col gap-10">
+                    <div class="flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                            <span class="font-index-numeral text-index-numeral text-text-muted">[LOG: 001_TRAJECTORY]</span>
+                            <span class="font-label-code text-caption text-text-secondary uppercase">INDUSTRY ARCHITECTURE &amp; OPERATIONS</span>
+                        </div>
+                        <h3 class="font-headline-lg text-headline-lg font-bold uppercase tracking-tight text-text-primary">
+                            Career Telemetry &amp; Deployments
+                        </h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        <!-- Role 1: KBR Engineer -->
+                        <div class="p-6 bg-surface-container-lowest border border-hairline-border flex flex-col justify-between gap-6 hover:border-text-primary transition-colors">
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-center justify-between font-label-code text-caption">
+                                    <span class="px-2 py-0.5 bg-primary text-canvas-base uppercase font-semibold">AUG 2026 — PRESENT</span>
+                                    <span class="text-text-muted">REMOTE</span>
+                                </div>
+                                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">Junior Cloud DevOps Engineer</h4>
+                                <span class="font-label-code text-caption text-primary font-semibold">KBR INC.</span>
+                                <p class="font-body-md text-caption text-text-secondary leading-normal">
+                                    Supporting mission-critical government cloud modernization efforts, automating secure hybrid cloud environments, collaborating with architecture and software teams to modernize enterprise workloads, and implementing DevOps best practices.
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-hairline-border flex flex-wrap gap-1.5 font-label-code text-[11px]">
+                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#GovCloud</span>
+                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#Terraform</span>
+                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#ZeroTrust</span>
+                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#AWS</span>
+                            </div>
+                        </div>
+
+                        <!-- Role 2: KBR Architect Intern -->
+                        <div class="p-6 bg-surface-container-lowest border border-hairline-border flex flex-col justify-between gap-6 hover:border-text-primary transition-colors">
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-center justify-between font-label-code text-caption">
+                                    <span class="px-2 py-0.5 bg-surface-container text-text-primary uppercase font-semibold">MAY 2026 — AUG 2026</span>
+                                    <span class="text-text-muted">CHANTILLY, VA</span>
+                                </div>
+                                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">Solution Architect Intern</h4>
+                                <span class="font-label-code text-caption text-text-primary font-semibold">KBR INC.</span>
+                                <p class="font-body-md text-caption text-text-secondary leading-normal">
+                                    Built an onboarding timeline to improve understanding of solution architecture workflows. Researched emerging AI applications for enterprise use cases, supported AI-driven digital transformation, and delivered technical presentations to executives.
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-hairline-border flex flex-wrap gap-1.5 font-label-code text-[11px]">
+                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#SolutionArch</span>
+                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#MBSE</span>
+                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#EnterpriseAI</span>
+                            </div>
+                        </div>
+
+                        <!-- Role 3: ManTech -->
+                        <div class="p-6 bg-surface-container-lowest border border-hairline-border flex flex-col justify-between gap-6 hover:border-text-primary transition-colors">
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-center justify-between font-label-code text-caption">
+                                    <span class="px-2 py-0.5 bg-surface-container text-text-primary uppercase font-semibold">JUL 2025 — PRESENT</span>
+                                    <span class="text-text-muted">HERNDON, VA</span>
+                                </div>
+                                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">Technical Intern</h4>
+                                <span class="font-label-code text-caption text-text-primary font-semibold">MANTECH</span>
+                                <p class="font-body-md text-caption text-text-secondary leading-normal">
+                                    Provided enterprise IT systems support using ServiceNow, Okta Admin, and Asana for 50+ staff. Engineered an internal AI knowledge base using Google NotebookLM to streamline IT resolution workflows.
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-hairline-border flex flex-wrap gap-1.5 font-label-code text-[11px]">
+                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#ServiceNow</span>
+                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#OktaAdmin</span>
+                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#NotebookLM</span>
+                            </div>
+                        </div>
+
+                        <!-- Role 4: Noblis -->
+                        <div class="p-6 bg-surface-container-lowest border border-hairline-border flex flex-col justify-between gap-6 hover:border-text-primary transition-colors">
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-center justify-between font-label-code text-caption">
+                                    <span class="px-2 py-0.5 bg-surface-container text-text-primary uppercase font-semibold">SUMMER 2024</span>
+                                    <span class="text-text-muted">RESTON, VA</span>
+                                </div>
+                                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">Software Engineer Intern</h4>
+                                <span class="font-label-code text-caption text-text-primary font-semibold">NOBLIS</span>
+                                <p class="font-body-md text-caption text-text-secondary leading-normal">
+                                    Integrated high-speed REST APIs with Redis and Apache Kafka for production AI/ML event pipelines. Accelerated system detection metrics by 1000% across containerized Docker clusters and CI/CD pipelines.
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-hairline-border flex flex-wrap gap-1.5 font-label-code text-[11px]">
+                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#Kafka</span>
+                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#Redis</span>
+                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#Docker</span>
+                            </div>
+                        </div>
+
+                        <!-- Role 5: Determan Tech Help -->
+                        <div class="p-6 bg-surface-container-lowest border border-hairline-border flex flex-col justify-between gap-6 hover:border-text-primary transition-colors md:col-span-2 lg:col-span-2">
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-center justify-between font-label-code text-caption">
+                                    <span class="px-2 py-0.5 bg-surface-container text-text-primary uppercase font-semibold">2023 — PRESENT</span>
+                                    <span class="text-text-muted">FALLS CHURCH, VA</span>
+                                </div>
+                                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">Technical Founder &amp; Systems Specialist</h4>
+                                <span class="font-label-code text-caption text-text-primary font-semibold">DETERMAN TECH HELP</span>
+                                <p class="font-body-md text-caption text-text-secondary leading-normal">
+                                    Founded and scaled an independent IT services company serving 100+ private and business clients with a 5.0-star rating. Engineered an automated scheduling platform using Node.js and Cloudflare edge networking, solving complex systems, security, and hardware requirements.
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-hairline-border flex flex-wrap gap-1.5 font-label-code text-[11px]">
+                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#NodeJS</span>
+                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#Cloudflare</span>
+                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#100+Clients</span>
+                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#EdgeOps</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- 2. WORK SECTION: THE INTERACTIVE INDEX (SELECTED BUILT WORKS) -->
+                <section id="work" class="py-12 border-b border-hairline-border flex flex-col gap-8">
                     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-hairline-border pb-6">
                         <div class="flex flex-col gap-2">
                             <div class="flex items-center gap-2">
-                                <span class="font-index-numeral text-index-numeral text-text-muted">[INDEX: 008_SELECTED]</span>
+                                <span class="font-index-numeral text-index-numeral text-text-muted">[INDEX: 002_SELECTED]</span>
                                 <span class="font-label-code text-caption text-text-secondary uppercase">CATALOGUE OF BUILT WORKS</span>
                             </div>
                             <h3 class="font-headline-lg text-headline-lg font-bold uppercase tracking-tight text-text-primary">
@@ -670,198 +791,13 @@
                     </div>
                 </section>
 
-                <!-- SECTION 4: CAREER TELEMETRY & DEPLOYMENTS -->
-                <section id="experience" class="py-12 border-t border-hairline-border flex flex-col gap-10">
+                <!-- 3. SKILLS SECTION: ENGINEERING DISCIPLINES & SKILLS MATRIX -->
+                <section id="skills" class="py-12 border-b border-hairline-border flex flex-col gap-10">
                     <div class="flex flex-col gap-2">
-                        <span class="font-index-numeral text-index-numeral text-text-muted">[LOG: 002_TRAJECTORY]</span>
-                        <h3 class="font-headline-lg text-headline-lg font-bold uppercase tracking-tight text-text-primary">
-                            Career Telemetry &amp; Deployments
-                        </h3>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                        <!-- Role 1: KBR Engineer -->
-                        <div class="p-6 bg-surface-container-lowest border border-hairline-border flex flex-col justify-between gap-6 hover:border-text-primary transition-colors">
-                            <div class="flex flex-col gap-3">
-                                <div class="flex items-center justify-between font-label-code text-caption">
-                                    <span class="px-2 py-0.5 bg-primary text-canvas-base uppercase font-semibold">AUG 2026 — PRESENT</span>
-                                    <span class="text-text-muted">REMOTE</span>
-                                </div>
-                                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">Junior Cloud DevOps Engineer</h4>
-                                <span class="font-label-code text-caption text-primary font-semibold">KBR INC.</span>
-                                <p class="font-body-md text-caption text-text-secondary leading-normal">
-                                    Supporting mission-critical government cloud modernization efforts, automating secure hybrid cloud environments, collaborating with architecture and software teams to modernize enterprise workloads, and implementing DevOps best practices.
-                                </p>
-                            </div>
-                            <div class="pt-4 border-t border-hairline-border flex flex-wrap gap-1.5 font-label-code text-[11px]">
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#GovCloud</span>
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#Terraform</span>
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#ZeroTrust</span>
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#AWS</span>
-                            </div>
+                        <div class="flex items-center gap-2">
+                            <span class="font-index-numeral text-index-numeral text-text-muted">[STACK: 003_DISCIPLINES]</span>
+                            <span class="font-label-code text-caption text-text-secondary uppercase">CORE SYSTEMS &amp; SPECIALIZED PROTOCOLS</span>
                         </div>
-
-                        <!-- Role 2: KBR Architect Intern -->
-                        <div class="p-6 bg-surface-container-lowest border border-hairline-border flex flex-col justify-between gap-6 hover:border-text-primary transition-colors">
-                            <div class="flex flex-col gap-3">
-                                <div class="flex items-center justify-between font-label-code text-caption">
-                                    <span class="px-2 py-0.5 bg-surface-container text-text-primary uppercase font-semibold">MAY 2026 — AUG 2026</span>
-                                    <span class="text-text-muted">CHANTILLY, VA</span>
-                                </div>
-                                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">Solution Architect Intern</h4>
-                                <span class="font-label-code text-caption text-text-primary font-semibold">KBR INC.</span>
-                                <p class="font-body-md text-caption text-text-secondary leading-normal">
-                                    Built an onboarding timeline to improve understanding of solution architecture workflows. Researched emerging AI applications for enterprise use cases, supported AI-driven digital transformation, and delivered technical presentations to executives.
-                                </p>
-                            </div>
-                            <div class="pt-4 border-t border-hairline-border flex flex-wrap gap-1.5 font-label-code text-[11px]">
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#SolutionArch</span>
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#MBSE</span>
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#EnterpriseAI</span>
-                            </div>
-                        </div>
-
-                        <!-- Role 3: ManTech -->
-                        <div class="p-6 bg-surface-container-lowest border border-hairline-border flex flex-col justify-between gap-6 hover:border-text-primary transition-colors">
-                            <div class="flex flex-col gap-3">
-                                <div class="flex items-center justify-between font-label-code text-caption">
-                                    <span class="px-2 py-0.5 bg-surface-container text-text-primary uppercase font-semibold">JUL 2025 — PRESENT</span>
-                                    <span class="text-text-muted">HERNDON, VA</span>
-                                </div>
-                                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">Technical Intern</h4>
-                                <span class="font-label-code text-caption text-text-primary font-semibold">MANTECH</span>
-                                <p class="font-body-md text-caption text-text-secondary leading-normal">
-                                    Provided enterprise IT systems support using ServiceNow, Okta Admin, and Asana for 50+ staff. Engineered an internal AI knowledge base using Google NotebookLM to streamline IT resolution workflows.
-                                </p>
-                            </div>
-                            <div class="pt-4 border-t border-hairline-border flex flex-wrap gap-1.5 font-label-code text-[11px]">
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#ServiceNow</span>
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#OktaAdmin</span>
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#NotebookLM</span>
-                            </div>
-                        </div>
-
-                        <!-- Role 4: Noblis -->
-                        <div class="p-6 bg-surface-container-lowest border border-hairline-border flex flex-col justify-between gap-6 hover:border-text-primary transition-colors">
-                            <div class="flex flex-col gap-3">
-                                <div class="flex items-center justify-between font-label-code text-caption">
-                                    <span class="px-2 py-0.5 bg-surface-container text-text-primary uppercase font-semibold">SUMMER 2024</span>
-                                    <span class="text-text-muted">RESTON, VA</span>
-                                </div>
-                                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">Software Engineer Intern</h4>
-                                <span class="font-label-code text-caption text-text-primary font-semibold">NOBLIS</span>
-                                <p class="font-body-md text-caption text-text-secondary leading-normal">
-                                    Integrated high-speed REST APIs with Redis and Apache Kafka for production AI/ML event pipelines. Accelerated system detection metrics by 1000% across containerized Docker clusters and CI/CD pipelines.
-                                </p>
-                            </div>
-                            <div class="pt-4 border-t border-hairline-border flex flex-wrap gap-1.5 font-label-code text-[11px]">
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#Kafka</span>
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#Redis</span>
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#Docker</span>
-                            </div>
-                        </div>
-
-                        <!-- Role 5: Determan Tech Help -->
-                        <div class="p-6 bg-surface-container-lowest border border-hairline-border flex flex-col justify-between gap-6 hover:border-text-primary transition-colors md:col-span-2 lg:col-span-2">
-                            <div class="flex flex-col gap-3">
-                                <div class="flex items-center justify-between font-label-code text-caption">
-                                    <span class="px-2 py-0.5 bg-surface-container text-text-primary uppercase font-semibold">2023 — PRESENT</span>
-                                    <span class="text-text-muted">FALLS CHURCH, VA</span>
-                                </div>
-                                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">Technical Founder &amp; Systems Specialist</h4>
-                                <span class="font-label-code text-caption text-text-primary font-semibold">DETERMAN TECH HELP</span>
-                                <p class="font-body-md text-caption text-text-secondary leading-normal">
-                                    Founded and scaled an independent IT services company serving 100+ private and business clients with a 5.0-star rating. Engineered an automated scheduling platform using Node.js and Cloudflare edge networking, solving complex systems, security, and hardware requirements.
-                                </p>
-                            </div>
-                            <div class="pt-4 border-t border-hairline-border flex flex-wrap gap-1.5 font-label-code text-[11px]">
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#NodeJS</span>
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#Cloudflare</span>
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#100+Clients</span>
-                                <span class="px-1.5 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">#EdgeOps</span>
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
-
-                <!-- SECTION 5: ACADEMIC CREDENTIALS & DOSSIER -->
-                <section id="education" class="py-12 border-t border-hairline-border flex flex-col gap-10">
-                    <div class="flex flex-col gap-2">
-                        <span class="font-index-numeral text-index-numeral text-text-muted">[DOSSIER: 003_ACADEMIC]</span>
-                        <h3 class="font-headline-lg text-headline-lg font-bold uppercase tracking-tight text-text-primary">
-                            Academic Credentials
-                        </h3>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-
-                        <!-- VT Degree -->
-                        <div class="p-6 bg-surface-container-lowest border border-hairline-border flex flex-col justify-between gap-6 hover:border-text-primary transition-colors">
-                            <div class="flex flex-col gap-3">
-                                <div class="flex items-center justify-between font-label-code text-caption">
-                                    <span class="px-2 py-0.5 bg-primary text-canvas-base uppercase font-semibold">EXPECTED MAY 2027</span>
-                                    <span class="text-text-muted">ALEXANDRIA, VA</span>
-                                </div>
-                                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">
-                                    Master of Engineering (M.Eng.) in Computer Science
-                                </h4>
-                                <span class="font-label-code text-caption text-primary font-semibold">VIRGINIA TECH</span>
-                                <p class="font-body-md text-caption text-text-secondary leading-normal">
-                                    Specializing in Artificial Intelligence and Machine Learning software engineering methodologies.
-                                </p>
-                            </div>
-                            <div class="pt-4 border-t border-hairline-border flex flex-col gap-2">
-                                <span class="font-label-code text-[11px] text-text-muted uppercase">Core Focus Areas:</span>
-                                <div class="flex flex-wrap gap-1.5 font-label-code text-[11px]">
-                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-primary">Intro to Artificial Intelligence</span>
-                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-primary">Intro to Machine Learning</span>
-                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-primary">AI Tools for Software Engineering</span>
-                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-primary">Mobile Application Development</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- JMU Degree -->
-                        <div class="p-6 bg-surface-container-lowest border border-hairline-border flex flex-col justify-between gap-6 hover:border-text-primary transition-colors">
-                            <div class="flex flex-col gap-3">
-                                <div class="flex items-center justify-between font-label-code text-caption">
-                                    <span class="px-2 py-0.5 bg-surface-container text-text-primary uppercase font-semibold">AUG 2022 — MAY 2026</span>
-                                    <span class="text-text-muted">HARRISONBURG, VA</span>
-                                </div>
-                                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">
-                                    Bachelor of Science (B.S.) in Computer Science
-                                </h4>
-                                <div class="flex items-center gap-2">
-                                    <span class="font-label-code text-caption text-text-primary font-semibold">JAMES MADISON UNIVERSITY</span>
-                                    <span class="text-text-muted">·</span>
-                                    <span class="font-label-code text-caption text-terminal-green font-semibold">GPA: 3.55 (Cum Laude)</span>
-                                </div>
-                                <p class="font-body-md text-caption text-text-secondary leading-normal">
-                                    Rigorous grounding in data structures, systems architecture, computer networks, algorithms, and database management.
-                                </p>
-                            </div>
-                            <div class="pt-4 border-t border-hairline-border flex flex-col gap-2">
-                                <span class="font-label-code text-[11px] text-text-muted uppercase">Foundational Coursework:</span>
-                                <div class="flex flex-wrap gap-1.5 font-label-code text-[11px]">
-                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">Algorithms &amp; Data Structures (CS240/345)</span>
-                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">Computer Systems (CS261/361)</span>
-                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">Programming Languages (CS430)</span>
-                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">Design &amp; Analysis of Algorithms (CS452)</span>
-                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">Database Systems (CS374)</span>
-                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">Advanced Computer Networks</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
-
-                <!-- SECTION 6: ENGINEERING DISCIPLINES & SKILLS MATRIX -->
-                <section id="skills" class="py-12 border-t border-hairline-border flex flex-col gap-10">
-                    <div class="flex flex-col gap-2">
-                        <span class="font-index-numeral text-index-numeral text-text-muted">[STACK: 004_DISCIPLINES]</span>
                         <h3 class="font-headline-lg text-headline-lg font-bold uppercase tracking-tight text-text-primary">
                             Engineering Disciplines &amp; Toolchain
                         </h3>
@@ -932,13 +868,88 @@
                     </div>
                 </section>
 
-                <!-- SECTION 7: SYSTEM DISPATCH / DIRECT TRANSMISSION DOCK -->
-                <section id="contact" class="py-12 border-t border-hairline-border">
+                <!-- 4. EDUCATION SECTION: ACADEMIC CREDENTIALS & DOSSIER -->
+                <section id="education" class="py-12 border-b border-hairline-border flex flex-col gap-10">
+                    <div class="flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                            <span class="font-index-numeral text-index-numeral text-text-muted">[DOSSIER: 004_ACADEMIC]</span>
+                            <span class="font-label-code text-caption text-text-secondary uppercase">INSTITUTIONAL DEGREES &amp; RESEARCH</span>
+                        </div>
+                        <h3 class="font-headline-lg text-headline-lg font-bold uppercase tracking-tight text-text-primary">
+                            Academic Credentials
+                        </h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+                        <!-- VT Degree -->
+                        <div class="p-6 bg-surface-container-lowest border border-hairline-border flex flex-col justify-between gap-6 hover:border-text-primary transition-colors">
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-center justify-between font-label-code text-caption">
+                                    <span class="px-2 py-0.5 bg-primary text-canvas-base uppercase font-semibold">EXPECTED MAY 2027</span>
+                                    <span class="text-text-muted">ALEXANDRIA, VA</span>
+                                </div>
+                                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">
+                                    Master of Engineering (M.Eng.) in Computer Science
+                                </h4>
+                                <span class="font-label-code text-caption text-primary font-semibold">VIRGINIA TECH</span>
+                                <p class="font-body-md text-caption text-text-secondary leading-normal">
+                                    Specializing in Artificial Intelligence and Machine Learning software engineering methodologies.
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-hairline-border flex flex-col gap-2">
+                                <span class="font-label-code text-[11px] text-text-muted uppercase">Core Focus Areas:</span>
+                                <div class="flex flex-wrap gap-1.5 font-label-code text-[11px]">
+                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-primary">Intro to Artificial Intelligence</span>
+                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-primary">Intro to Machine Learning</span>
+                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-primary">AI Tools for Software Engineering</span>
+                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-primary">Mobile Application Development</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- JMU Degree -->
+                        <div class="p-6 bg-surface-container-lowest border border-hairline-border flex flex-col justify-between gap-6 hover:border-text-primary transition-colors">
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-center justify-between font-label-code text-caption">
+                                    <span class="px-2 py-0.5 bg-surface-container text-text-primary uppercase font-semibold">AUG 2022 — MAY 2026</span>
+                                    <span class="text-text-muted">HARRISONBURG, VA</span>
+                                </div>
+                                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-1">
+                                    Bachelor of Science (B.S.) in Computer Science
+                                </h4>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-label-code text-caption text-text-primary font-semibold">JAMES MADISON UNIVERSITY</span>
+                                    <span class="text-text-muted">·</span>
+                                    <span class="font-label-code text-caption text-terminal-green font-semibold">GPA: 3.55 (Cum Laude)</span>
+                                </div>
+                                <p class="font-body-md text-caption text-text-secondary leading-normal">
+                                    Rigorous grounding in data structures, systems architecture, computer networks, algorithms, and database management.
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-hairline-border flex flex-col gap-2">
+                                <span class="font-label-code text-[11px] text-text-muted uppercase">Foundational Coursework:</span>
+                                <div class="flex flex-wrap gap-1.5 font-label-code text-[11px]">
+                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">Algorithms &amp; Data Structures (CS240/345)</span>
+                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">Computer Systems (CS261/361)</span>
+                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">Programming Languages (CS430)</span>
+                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">Design &amp; Analysis of Algorithms (CS452)</span>
+                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">Database Systems (CS374)</span>
+                                    <span class="px-2 py-0.5 bg-surface-container border border-hairline-border text-text-secondary">Advanced Computer Networks</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- 5. CONTACT SECTION: SYSTEM DISPATCH / DIRECT TRANSMISSION DOCK -->
+                <section id="contact" class="py-12">
                     <div class="bg-surface-container-low p-8 lg:p-12 border border-hairline-border flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
                         <div class="flex flex-col gap-3 max-w-xl">
                             <div class="flex items-center gap-2">
                                 <span class="w-2.5 h-2.5 rounded-full bg-terminal-green"></span>
-                                <span class="font-label-code text-caption text-text-secondary uppercase font-semibold">DISPATCH // READY FOR INQUIRIES</span>
+                                <span class="font-label-code text-caption text-text-secondary uppercase font-semibold">DISPATCH: 005_TRANSMISSION // READY FOR INQUIRIES</span>
                             </div>
                             <h3 class="font-headline-md text-headline-md font-bold tracking-tight text-text-primary">
                                 Initiate direct transmission for cloud engineering or contract systems work.
