@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     const imageEl = document.createElement('img');
                     imageEl.src = img;
                     imageEl.alt = title;
-                    imageEl.className = 'w-full h-full object-contain bg-canvas-base p-2';
+                    imageEl.className = 'w-full h-full object-cover';
                     drawerMediaContainer.appendChild(imageEl);
                 }
             }
