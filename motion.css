@@ -1,0 +1,212 @@
+/* Motion layer: transform + opacity only. Loaded after styles.css. */
+:root {
+    --m-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --m-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --m-glow: 166, 255, 0; /* matches --accent-color */
+}
+
+@keyframes m-rise {
+    from { opacity: 0; transform: translate3d(0, 12px, 0); }
+    to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes m-fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ---------- Hero entrance (CSS-only: no JS gate on LCP, no layout shift) ---------- */
+.m-hero {
+    animation: m-rise 0.7s var(--m-ease) backwards;
+    animation-delay: calc(var(--i, 0) * 90ms + 60ms);
+}
+
+/* Hero is staged by its children, so the section itself must not be hidden */
+.hero.reveal { opacity: 1; transform: none; }
+
+/* ---------- Live status badge: soft radial pulse ---------- */
+.status-dot {
+    position: relative;
+    flex: none;
+    animation: none; /* replaces the old opacity blink */
+}
+
+.status-dot::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--accent-color);
+    animation: m-pulse 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes m-pulse {
+    0%        { transform: scale(1);   opacity: 0.7; }
+    75%, 100% { transform: scale(4.2); opacity: 0; }
+}
+
+/* ---------- Controls: explicit properties instead of `all`, spring on transform ---------- */
+.nav-pill a,
+.hero-socials .social-link,
+.btn,
+.course-tag,
+.theme-toggle,
+.contact-links a,
+.project-hover-icons a,
+.modal-btn,
+.project-modal-close {
+    transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease,
+                opacity 0.25s ease, transform 0.45s var(--m-spring);
+}
+
+.nav-pill a,
+.contact-links a { display: inline-block; }
+
+.btn:active,
+.nav-pill a:active,
+.hero-socials .social-link:active,
+.theme-toggle:active,
+.project-hover-icons a:active,
+.modal-btn:active { transform: scale(0.95); transition-duration: 0.1s; }
+
+@media (hover: hover) {
+    .nav-pill a:hover,
+    .contact-links a:hover { transform: translate3d(0, -2px, 0) scale(1.06); }
+
+    .hero-socials .social-link:hover { transform: translate3d(0, -2px, 0) scale(1.12); }
+    .theme-toggle:hover { transform: scale(1.12); }
+
+    .btn.primary:hover,
+    .btn.secondary:hover,
+    .modal-btn.github-btn:hover,
+    .modal-btn.live-btn:hover { transform: translate3d(0, -2px, 0) scale(1.02); }
+}
+
+/* ---------- Cards: scroll-in, micro-elevation, border highlight, cursor glow ---------- */
+.bento-item,
+.project-minimal-card {
+    position: relative;
+    transition: transform 0.4s var(--m-ease), border-color 0.3s ease;
+}
+
+/* Glow layer: only its opacity animates */
+.bento-item::after,
+.project-minimal-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    box-shadow: inset 0 0 0 1px rgba(var(--m-glow), 0.7);
+    background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 0%),
+                rgba(var(--m-glow), 0.16), transparent 70%);
+}
+
+.project-minimal-card::before { z-index: 3; }
+
+/* Repo/link icons were painting under the hover overlay (z-index 1) */
+.project-hover-icons { z-index: 4; }
+
+@media (hover: hover) {
+    .bento-item:hover,
+    .project-minimal-card:hover {
+        transform: translate3d(0, -2px, 0) scale(1.008);
+    }
+
+    .project-minimal-card:hover { z-index: 5; }
+
+    .bento-item:hover::after,
+    .project-minimal-card:hover::before { opacity: 1; }
+
+    .course-tag:hover { transform: translate3d(0, -2px, 0) scale(1.04); }
+}
+
+/* The old rule kept `all`, which includes the grayscale filter and layout-adjacent props */
+.project-minimal-img {
+    transition: transform 0.7s var(--m-ease), filter 0.5s ease;
+}
+
+.marquee-item { transition: color 0.3s ease, opacity 0.3s ease, transform 0.4s var(--m-spring); }
+
+@media (hover: hover) {
+    .marquee-item:hover { transform: scale(1.04); }
+}
+
+/* Scroll-in: parents become pass-through so each child staggers on its own */
+.reveal.m-pass { opacity: 1; transform: none; }
+
+.js .m-reveal:not(.is-in) { opacity: 0; transform: translate3d(0, 12px, 0); }
+
+.m-reveal.is-in {
+    animation: m-rise 0.65s var(--m-ease) backwards;
+    animation-delay: var(--m-delay, 0ms);
+}
+
+/* ---------- Custom cursor: transform-driven (was left/top + width/height) ---------- */
+.cursor-dot,
+.cursor-outline {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cursor-dot.is-live,
+.cursor-outline.is-live { opacity: 1; }
+
+.cursor-dot { transform: translate3d(var(--cx, 0px), var(--cy, 0px), 0) translate(-50%, -50%); }
+
+.cursor-outline {
+    transition: opacity 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    transform: translate3d(var(--cx, 0px), var(--cy, 0px), 0) translate(-50%, -50%) scale(var(--cs, 1));
+}
+
+.cursor-outline.is-hot {
+    --cs: 2;
+    background-color: rgba(var(--m-glow), 0.1);
+    border-color: transparent;
+}
+
+@media (hover: none) {
+    .cursor-dot, .cursor-outline { display: none; }
+}
+
+/* ---------- Reduced motion: opacity-only, no loops ---------- */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+
+    .m-hero,
+    .m-reveal.is-in {
+        animation: m-fade 0.2s linear backwards;
+        animation-delay: 0ms;
+    }
+
+    .js .m-reveal:not(.is-in) { transform: none; }
+    .reveal, .reveal.active { transform: none; transition: opacity 0.2s linear; }
+
+    .status-dot::after { animation: none; opacity: 0; }
+
+    /* Static, user-scrollable skills strip instead of an endless loop */
+    .marquee { overflow-x: auto; scrollbar-width: none; }
+    .marquee::-webkit-scrollbar { display: none; }
+    .marquee-content { animation: none; }
+
+    .cursor-outline, .cursor-dot { --cs: 1; }
+
+    *, *::before, *::after { transition-property: color, background-color, border-color, opacity !important; }
+
+    .nav-pill a:hover,
+    .contact-links a:hover,
+    .hero-socials .social-link:hover,
+    .theme-toggle:hover,
+    .btn:hover,
+    .modal-btn:hover,
+    .bento-item:hover,
+    .project-minimal-card:hover,
+    .project-minimal-card:hover .project-minimal-img,
+    .course-tag:hover,
+    .marquee-item:hover,
+    .project-modal-close:hover { transform: none; }
+}
